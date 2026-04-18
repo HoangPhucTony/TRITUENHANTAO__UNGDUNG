@@ -1,0 +1,19 @@
+[Markdown] 
+[Code] # CÀI ĐẶC CÁC THƯ VIỆN CẦN THIẾT   from pathlib import Path 
+[Code] # CÀI ĐẶT ĐƯỜNG DẪN   ROOT = Path(r"D:\DOHOANGPHUC\UTH\TriTu
+[Code] # HÀM TIỆN ÍCH   def save_figure(fig, filename: str, dpi: in
+[Code] # LOAD DỮ LIỆU   print_section("Load dữ liệu")  df_raw = pd.
+[Code] # KHAI PHÁ DỮ LIỆU   print_section("Khám phá dữ liệu ban đầu
+[Markdown] ## Tiền xử lý dữ liệu
+[Code] # LÀM SẠCH DỮ LIỆU   print_section("Làm sạch dữ liệu")  df =
+[Code] # FEATURE ENGINEERING  print_section("Tạo biến mới")  # Giá 
+[Code] # LƯU DỮ LIỆU ĐÃ LÀM SẠCH  print_section("Lưu dữ liệu đã làm
+[Code] # PHÂN TÍCH ĐƠN BIẾN  print_section("Phân tích đơn biến")  #
+[Markdown] ## Nhận xét đơn biến
+[Code] # PHÂN TÍCH ĐƠN BIẾN VÀ ĐA BIẾN  print_section("Phân tích ha
+[Markdown] ## Nhận xét theo nhóm
+[Code] # KHAI THÁC TỪ TIÊU ĐỀ TIN ĐĂNG, KEYWORD  print_section("Kha
+[Code] # PHÂN KHÚC THỊ TRƯỜNG  print_section("Phân khúc thị trường"
+[Code] # INSIGHT CHÍNH   print_section("Tổng hợp insight chính")  t
+[Code] # HẠN CHẾ   print_section("Hạn chế của dữ liệu")  limitation
+[Code] # ========================= # 15. EXPORT REPORTS # =========

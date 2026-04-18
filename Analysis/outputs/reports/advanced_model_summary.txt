@@ -1,0 +1,15 @@
+
+KẾT LUẬN MÔ HÌNH NÂNG CAO
+
+Trong nhóm các mô hình nâng cao được lựa chọn để so sánh gồm Random Forest và XGBoost,
+mô hình cho kết quả tốt nhất trên tập kiểm tra là XGBoost.
+
+Kết quả đánh giá của mô hình tốt nhất:
+- CV RMSE tốt nhất: 5330948.7500
+- Test MAE       : 2563566.5000
+- Test RMSE      : 6783881.5241
+- Test R2        : 0.3857
+- Test MAPE (%)  : 37.6617
+
+Như vậy, XGBoost là mô hình phù hợp hơn cho bài toán dự đoán giá thuê phòng trọ
+trên dataset PhongTro ở giai đoạn hiện tại.
