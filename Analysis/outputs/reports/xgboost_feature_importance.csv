@@ -1,0 +1,1281 @@
+feature,importance
+cat__vitri_Quận 10,0.107064284
+num__area_m2,0.058991116
+cat__tieude_Mặt tiền Nguyễn Thái Bình,0.04583846
+cat__phanloai_PhongTro,0.04500441
+cat__tieude_Căn góc 2 mặt tiền Nguyễn Trãi,0.04046794
+cat__vitri_Quận 2,0.035190832
+cat__vitri_Phú Nhuận,0.03499984
+cat__tieude_Chung cư Tô Hiến Thành Quận 10,0.026770752
+cat__tieude_Nhà nguyên căn mặt tiền Trần Bình Trọng,0.026652202
+cat__vitri_Quận 3,0.025418792
+cat__phanloai_NhaNguyenCan,0.023747861
+cat__vitri_Bình Tân,0.019771833
+cat__tieude_Nhà mặt tiền Mai Thị Lựu,0.017452791
+cat__tieude_Nhà mặt tiền Nguyễn Tiểu La,0.015889697
+cat__dientich_160 m,0.014856162
+cat__vitri_Tân Bình,0.011144661
+cat__vitri_Quận 9,0.009358881
+cat__tieude_Phòng riêng trong villa tại Củ Chi,0.008737469
+cat__dientich_85 m,0.0075152456
+num__sophong,0.0073636724
+cat__tieude_Nhà full nội thất 2 mặt tiền An Khánh,0.0073489635
+cat__tieude_Căn hộ dịch vụ 9 phòng Q1,0.007214485
+cat__dientich_45 m,0.007195819
+cat__tieude_Nhà mặt tiền kinh doanh gần Chợ Lớn,0.0071908846
+cat__tieude_Biệt thự hẻm xe hơi Lê Văn Sỹ,0.006657676
+cat__standardized_location_Quận 2,0.0065369313
+cat__standardized_location_Quận 12,0.006390091
+cat__standardized_location_Phú Nhuận,0.0063612075
+cat__tieude_Căn hộ Masteri Centre Point,0.006316067
+cat__tieude_Nhà Hoa Lan 6 phòng,0.006223755
+cat__vitri_Quận 5,0.006064992
+cat__standardized_location_Bình Tân,0.0059382687
+cat__tieude_Nhà nguyên căn mặt tiền Nguyễn Tất Thành,0.0056789606
+cat__tieude_Tòa nhà mặt tiền 3/2,0.0056708236
+cat__dientich_35 m,0.005533165
+cat__standardized_location_Quận 1,0.0054686014
+cat__tieude_Nhà nguyên căn CMT8 gần chung cư Hà Đô,0.0054027173
+cat__tieude_Nhà kho nguyên căn Bình Thới,0.0054018605
+cat__dientich_60 m,0.005244162
+cat__standardized_location_Quận 7,0.005190612
+cat__tieude_Nhà Xuân Hồng mặt tiền,0.0050778883
+cat__tieude_Nhà Trường Chinh mặt tiền,0.004751654
+cat__vitri_Thu Duc,0.004635218
+cat__tieude_Nhà nguyên căn KDC chợ Bình Điền,0.0045961966
+cat__tieude_Nhà Cát Lái 5x17 1 trệt 3 lầu,0.004449579
+cat__vitri_Quận 12,0.004408211
+cat__tieude_Nhà Linh Trung 3 tầng,0.0040072612
+cat__standardized_location_Bình Chánh,0.003875086
+cat__standardized_location_Quận 10,0.0037359474
+cat__vitri_Gò Vấp,0.003670902
+cat__dientich_105 m,0.0035849193
+cat__tieude_Nhà Đặng Văn Ngữ,0.003578598
+cat__tieude_Nhà 52m2 5PN 5WC Nguyễn Duy Trinh,0.0035048008
+cat__tieude_Nhà mặt tiền kinh doanh Điện Biên Phủ,0.0033862086
+cat__tieude_Nhà mặt tiền Trường Sa,0.003330834
+cat__dientich_52 m,0.0033295935
+cat__tieude_Nhà nguyên căn Võ Văn Kiệt,0.0033200528
+cat__tieude_Nhà nguyên căn 2 mặt tiền Nguyễn Duy Trinh,0.0032971257
+cat__vitri_Bình Thạnh,0.0032736002
+cat__tieude_Nhà 3 phòng ngủ và đất trống,0.0032623725
+cat__tieude_Nhà sát mặt tiền Lê Văn Sỹ,0.0032138638
+cat__tieude_Nhà 3 tầng hẻm 8m Hà Tôn Quyền,0.003162983
+cat__standardized_location_Quận 3,0.0031393478
+cat__tieude_Nhà nguyên căn Nguyễn Giản Thanh,0.0030746264
+num__has_studio,0.0029991511
+cat__vitri_Bình Chánh,0.0027569574
+cat__vitri_Quận 8,0.0027493292
+cat__vitri_Quan 7,0.002742551
+cat__tieude_Nhà nguyên căn mặt tiền Huỳnh Tấn Phát,0.002617686
+cat__tieude_Nhà nguyên căn mặt tiền đường 32 Cát Lái,0.0025736499
+cat__tieude_Nhà nguyên căn Bà Hom,0.0025513424
+cat__tieude_Nhà Phùng Văn Cung,0.0024491397
+cat__standardized_location_Tân Phú,0.0022548558
+cat__tieude_Nhà Hoàng Văn Thụ,0.0022122483
+cat__dientich_95 m,0.0021987706
+cat__vitri_Hóc Môn,0.0021655685
+cat__standardized_location_Quận 6,0.0021648572
+cat__tieude_Căn hộ 1PN Masteri Centre Point,0.0021144715
+cat__standardized_location_Thủ Đức,0.0021091981
+cat__vitri_Binh Tan,0.0020642965
+cat__tieude_Penthouse Co San Thuong Rieng Sieu Chill 40m2 Full Noi That Binh Thanh,0.002040562
+cat__tieude_Nhà hẻm Huỳnh Mẫn Đạt,0.0020356851
+cat__vitri_Quận 11,0.0019993626
+cat__tieude_Nhà nguyên căn hẻm 3 gác Quận 10,0.0019765676
+cat__standardized_location_Quận 5,0.0019599423
+cat__tieude_Nhà mới XVNT gần Hàng Xanh,0.0019038348
+cat__tieude_Nhà phố 4 tầng gần Hiệp Thành City,0.0018753965
+cat__vitri_Binh Thanh,0.0018691395
+cat__tieude_Căn hộ An Phú Quận 6,0.0018231422
+cat__dientich_58 m,0.0017826776
+cat__dientich_200 m,0.0017789404
+num__has_balcony,0.0017786144
+cat__tieude_Nhà 4 tầng Tỉnh lộ 10,0.0017291715
+cat__vitri_Củ Chi,0.0016929248
+num__has_new,0.0016669084
+cat__phanloai_CanHoChungCu,0.001637844
+cat__tieude_Nhà nguyên căn Hùng Vương,0.0016298092
+cat__tieude_Nhà nguyên căn Trần Quang Diệu,0.0015957126
+cat__dientich_120 m,0.0015844911
+cat__tieude_Nhà riêng biệt trung tâm Quận 5,0.001564222
+cat__standardized_location_Quận 8,0.0015137357
+cat__tieude_Căn 1PN Thạnh Mỹ Lợi,0.0015055939
+cat__tieude_Nhà nguyên căn Lý Thường Kiệt,0.0014764306
+cat__dientich_96 m,0.0014473003
+cat__dientich_65 m,0.0014331673
+cat__tieude_Nhà Dương Quảng Hàm 3PN,0.0014175769
+cat__tieude_Nhà cho thuê Trần Đình Xu,0.0014121989
+cat__tieude_CHO THUE CAN HO MINI NGUYEN TRONG TUYEN PHU NHUAN GAN SAN BAY TAN SON NHAT GIAP TAN BINH,0.001382375
+cat__tieude_Nhà mặt tiền Phạm Văn Đồng,0.0013451488
+cat__tieude_Nhà góc 2 mặt tiền Lạc Long Quân,0.0013421534
+cat__tieude_CAN HO CAO CAP MOI TINH NGAY TAN PHU - FULL NOI THAT - THUAN TIEN VAO TRUNG TAM,0.0013326084
+cat__tieude_Nhà Hiệp Bình Phước 4PN,0.0013303636
+cat__vitri_Tan Phu,0.0013069139
+cat__tieude_Nhà Nguyễn Văn Nghi mới,0.0013017269
+cat__vitri_Binh Chanh,0.0012862585
+cat__tieude_Nhà Đoàn Thị Điểm 3 tầng,0.0012827108
+cat__tieude_Nhà 4PN 3WC Quận 8,0.0012677056
+cat__tieude_Nhà lầu 1 Trần Hưng Đạo,0.0012636667
+cat__tieude_Phòng vừa hoàn thiện Quang Trung,0.0012464215
+cat__area_group_Vừa (25-50m²),0.0012321972
+cat__tieude_Nhà nguyên căn Trịnh Đình Trọng,0.0012060599
+cat__tieude_Biệt thự mini Trần Não,0.0011973279
+cat__tieude_Phòng siêu rộng Chu Văn An,0.0011738662
+cat__dientich_50 m,0.0011599911
+num__has_elevator,0.0011306658
+cat__tieude_Nhà Trần Mai Ninh,0.0010878412
+cat__vitri_Quan 1,0.0010839801
+cat__tieude_Nhà mặt tiền KDC Bảo Châu,0.0010792055
+cat__tieude_Nhà mặt bằng kinh doanh Cách Mạng Tháng Tám,0.0010584979
+cat__dientich_64 m,0.0010507014
+cat__tieude_Nhà gần chợ Bình Trị Đông,0.0010506888
+cat__tieude_Nhà 4 tầng đường số 76,0.0010493505
+cat__tieude_Studio kiểu Nhật full nội thất,0.0010458238
+cat__dientich_72 m,0.001039663
+cat__tieude_2 nữ ở ghép nhà nguyên căn Hóc Môn,0.0010361259
+cat__tieude_Nhà gần Gigamall,0.0010344555
+cat__tieude_Nhà nguyên căn Đoàn Văn Bơ,0.001034026
+cat__tieude_CHO THUE CAN HO STUDIO FULL NOI THAT 3.5TR/THANG,0.0010248256
+cat__tieude_Nhà đường Trần Não 3 lầu,0.0010154281
+cat__tieude_Can ho 40m2 studio KDC Trung Son sat DH RMIT NTT TDTU,0.0010126524
+cat__tieude_Căn hộ lầu 2 Nguyễn An Khương Q5,0.0010024422
+cat__tieude_Nhà hẻm Hoàng Sa Tân Định,0.0009927595
+cat__tieude_Phòng Sleepbox Trần Khắc Chân,0.0009677205
+cat__tieude_Nhà nguyên căn cấp 4 Bình Thới,0.0009477174
+cat__tieude_Nhà đẹp Bình Tân 3PN,0.0009419841
+cat__dientich_92 m,0.0009415848
+cat__tieude_Căn hộ cao cấp H2 2PN,0.00093122746
+cat__vitri_Quận 7,0.0009259855
+cat__tieude_Căn hộ 1PN sân lớn Tân Quy Quận 7,0.00092391274
+cat__tieude_Can ho FULL NOI THAT – Ban cong cuc thoang – Tran Xuan Soan Q7 – Sat RMIT & Lotte Mart,0.00091843226
+cat__tieude_Nhà nguyên căn Lò Siêu,0.0009082107
+cat__tieude_Nhà kho KDC Bình Điền,0.0009043694
+cat__dientich_100 m,0.0009018389
+cat__tieude_Nhà nguyên căn hẻm 258 Dương Bá Trạc,0.0008935828
+cat__tieude_Nhà Phạm Văn Bạch 3PN,0.0008877352
+cat__tieude_CAN HO DICH VU CHO THUE STUDIO DECOR XINH GAN CAU HIM LAM,0.0008821698
+cat__tieude_Nhà Trường Thọ 96m2,0.0008782649
+cat__tieude_Can Ho Cao Cap Moi Xay Phan Van Tri,0.0008779152
+cat__tieude_Nhà 1 trệt 1 lầu Bến Bình Đông,0.00087416236
+cat__tieude_Nhà nguyên căn 2 mặt tiền kinh doanh,0.0008730012
+cat__phanloai_Duplex,0.0008693934
+cat__tieude_Nhà 3 tầng Đặng Thúc Liêng,0.00086881884
+cat__tieude_Can ho NOI THAT HIEN DAI LUXURY MAY GIAT RIENG ngay trung tam Quan 1,0.0008561289
+cat__tieude_Nhà Phan Văn Trị gần cầu đỏ,0.00082062936
+cat__tieude_Cho thue can ho mini Tran Xuan Soan Quan 7 Gan Nguyen Huu Tho Lotte Mart Q7 Gan Dai hoc RMIT Dai hoc,0.0008096191
+cat__tieude_Nhà Trần Hữu Trang 4PN,0.0008023793
+cat__tieude_Nhà Nguyễn Văn Thương (D1),0.000793943
+cat__tieude_Can ho dang villa Quan 4 thoang rong gan cau Nguyen Van Cu,0.0007876424
+cat__tieude_Nhà 5 tầng gần bệnh viện Lê Văn Thịnh,0.0007876189
+cat__tieude_Nhà Nguyễn Văn Trỗi 3PN,0.0007867767
+num__has_furniture,0.0007859631
+cat__tieude_Nhà Trần Thị Trọng 4PN,0.00078108313
+cat__tieude_Nhà Phan Xích Long,0.0007802014
+cat__vitri_Quan 10,0.00077731314
+cat__tieude_Nhà mới hẻm 875 Trần Hưng Đạo,0.00077716616
+cat__tieude_Nhà nguyên căn Nguyễn Trãi,0.00076802593
+cat__tieude_Nhà nguyên căn 70m2 2PN,0.0007646088
+cat__tieude_Nhà ở mặt bằng kinh doanh Quận 9,0.0007623208
+cat__tieude_Nhà nguyên căn hẻm 419 Cách Mạng Tháng 8,0.0007614636
+cat__tieude_Căn hộ có ban công full nội thất Quận 7,0.00075968745
+cat__tieude_Nhà nguyên căn 2 tầng Nguyễn Cư Trinh,0.00075206294
+cat__tieude_Nhà nguyên căn đường TCH13,0.00074884354
+cat__tieude_Can ho mini 1PN – ban cong – Full noi that – Phu Nhuan - 35m,0.00074612733
+cat__tieude_Căn hộ dịch vụ 1 phòng ngủ Quận 7,0.00074184843
+cat__tieude_Nhà Lê Đức Thọ 2PN,0.0007386155
+cat__tieude_Nhà nguyên căn Trần Xuân Soạn,0.0007281328
+cat__tieude_Can Ho Moi Xay 1 Phong Ngu Ban Cong 50m2 Thang May Gia Cuc Tot Ngay Trung Tam Quan 1,0.0007266519
+cat__tieude_Nhà nguyên căn Cống Quỳnh,0.0007171809
+cat__tieude_Nhà nguyên căn Văn Thân,0.0007160896
+cat__tieude_Nhà kinh doanh Dương Bá Trạc,0.00070647866
+cat__dientich_15 m,0.00070582534
+cat__tieude_Nhà Thích Quảng Đức rộng,0.00070337736
+cat__tieude_Cho Thue can ho mini MT duong Nam Hoa,0.0007023603
+cat__tieude_Căn hộ dịch vụ 1PN ban công view sông Quận 7,0.0007018221
+cat__tieude_Nhà mặt tiền đường 37,0.00069203845
+cat__tieude_Nhà nguyên căn 2 tầng 3PN 3WC,0.00069104927
+cat__tieude_Ký túc xá sleepbox Quận 5,0.00068854296
+cat__tieude_Căn hộ MT Eastmark City 1PN 2PN 3PN,0.0006869937
+cat__tieude_Studio ban công rộng gần Lotte Mart Quận 7,0.0006829213
+cat__tieude_Phòng sleepbox ở ghép Quận 10,0.00068184576
+cat__tieude_Nhà 4 tầng gần cầu Chà Và,0.00067791546
+cat__tieude_Nhà đường số 22 Gò Vấp,0.0006766899
+cat__tieude_Nhà nguyên căn KDC Nam Long Phú Thuận,0.0006766565
+cat__tieude_Căn hộ 1PN Đoàn Như Hài Q4,0.00067652465
+cat__tieude_Nhà nguyên căn 2 phòng ngủ Trần Xuân Soạn,0.0006714815
+cat__tieude_Nhà nguyên căn Chu Văn An 2PN,0.0006603317
+cat__tieude_Nhà riêng Trần Xuân Soạn sau chùa Kiều Đàm,0.00065999577
+cat__tieude_Phòng trọ ở ghép giá rẻ Quận 4,0.0006599475
+cat__dientich_23 m,0.00065755943
+cat__standardized_location_Bình Thạnh,0.0006525265
+cat__tieude_Nhà riêng gần Phạm Văn Đồng và CV Gia Định,0.00064922305
+cat__tieude_Căn hộ trung tâm Quận 5,0.00064602843
+cat__tieude_CAN HO 1PN 1 BEP KHACH - VIEW SIEU DEP QUAN 3,0.0006452643
+cat__tieude_Nhà Hoàng Văn Thụ 2PN,0.00064116745
+cat__tieude_Nhà nguyên căn Phạm Hữu Lầu,0.0006362806
+cat__tieude_Nhà nguyên căn Thạnh Mỹ Lợi,0.00063597684
+cat__dientich_25 m,0.00063249667
+cat__vitri_Quan 8,0.0006272753
+cat__tieude_Nhà nguyên căn An Phú Đông,0.0006262526
+cat__tieude_Phòng vừa ở vừa kinh doanh,0.00062052795
+cat__tieude_Nhà Cộng Hòa,0.0006188368
+cat__tieude_Ở ghép Quận 10 gần ĐH HUFLIT,0.000614065
+cat__dientich_56 m,0.0006093225
+cat__tieude_1PN TACH BEP DAY DU NOI THAT - DOAN VAN BO QUAN 4,0.00060725573
+cat__tieude_CAN HO MINI CAO CAP 1 PHONG NGU – BAN CONG LON | TRAN XUAN SOAN QUAN 7,0.00060713425
+cat__tieude_Nhà mặt tiền kinh doanh Lạc Long Quân,0.0006062914
+cat__tieude_Nhà nguyên căn trệt lửng Nguyễn Thị Định,0.0006050665
+cat__tieude_CHO THUE CAN HO 1 phong ngu ban cong view dep tai Tran Xuan Soan Quan 7,0.0006015751
+cat__tieude_Nhà 1 trệt 1 lửng gần ĐH Y Dược,0.00060025393
+cat__tieude_Căn hộ Sài Gòn Gateway,0.00057538215
+cat__tieude_Nhà nguyên căn 2PN Sư Vạn Hạnh,0.0005752478
+cat__tieude_Phòng Sleepbox full nội thất Lê Đại Hành,0.00056909135
+cat__tieude_Chung cư 10A Trần Nhật Duật Q1,0.0005672619
+cat__tieude_Phòng Sleepbox Lê Đại Hành,0.00055708125
+cat__tieude_CAN HO MINI CANH LOTTE MART QUAN 7 50M VIEW LANDMARK,0.0005559864
+cat__dientich_48 m,0.0005509115
+cat__tieude_Nhà Phan Văn Trị nhỏ xinh,0.00053456984
+cat__tieude_Phòng ban công gần cầu Kiệu,0.0004996804
+cat__tieude_Nhà mặt tiền Lê Đức Thọ,0.00047625785
+cat__phanloai_CanHoMini,0.0004529402
+num__has_mezzanine,0.00044251652
+cat__tieude_Căn chung cư The Western Capital Quận 6,0.0004321147
+cat__tieude_Studio cửa sổ trời full nội thất,0.00040684582
+cat__tieude_NGAN/DAI HAN DEU DUOC CHO THUE PHONG DEP VIEW 10 DIEM_CONG VIEN 65HA AN SUONG P THT Q12,0.00036846127
+cat__tieude_Căn hộ cao cấp giá rẻ tại Củ Chi,0.00036831683
+cat__tieude_Chung cư Thái An 3 Nguyễn Văn Quá Q12,0.0003430982
+cat__tieude_Phòng trọ Hóc Môn ở và buôn bán được,0.00033877022
+cat__vitri_Quan 6,0.0003326859
+cat__tieude_Phòng gác duplex full nội thất gần ĐH Bách Khoa,0.00031987345
+cat__tieude_TRONG 1P BANCONG NGAY GAN CAU THAM LUONG,0.00031405993
+cat__vitri_Quan 12,0.00030639084
+cat__tieude_Căn hộ 2PN gần chợ trường học,0.00029389444
+cat__tieude_Nhà nguyên căn Nguyễn Đình Chiểu gần chợ Bàn Cờ,0.00028150954
+cat__tieude_Căn hộ Diamond Riverside 2PN,0.00026914853
+cat__tieude_Chung cư Ông Ích Khiêm Quận 11,0.0002665391
+cat__tieude_Nhà chính chủ gần Rivera Park,0.00021622451
+cat__tieude_KTX sinh viên gần HUTECH và GTVT,0.00020980705
+cat__tieude_Chung cư 312 Lạc Long Quân Quận 11,0.00019319357
+num__has_window,0.0001811963
+cat__tieude_NGAY DUONG SO 7 GIAO VOI TEN LUA CHI 2 PHUT - CAN HO MOI CHUA QUA SU DUNG RONG THOANG 35m2,0.00016048882
+cat__tieude_Phòng trọ tiện nghi thoáng mát,0.00015331972
+cat__tieude_Phòng trọ Bà Điểm gần bến xe chợ,0.00015151725
+cat__dientich_30 m,0.00014803396
+cat__tieude_Can Ho 1 Phong Ngu Full Noi That Ban Cong Sieu Thoang ngay Tan Ky Tan Quy - AEON Tan Phu,0.0001439987
+cat__dientich_20 m,0.00013115782
+cat__dientich_36 m,0.00013072438
+cat__tieude_Phòng rộng Bến Lội Bình Tân,0.00012777427
+cat__tieude_Căn hộ Diamond Riverside 3PN,0.00012401435
+cat__tieude_CCCC Mỹ Vinh Nguyễn Thị Minh Khai Q3,0.00012157973
+cat__tieude_Nhà Khuất Văn Bức,0.00011702506
+cat__tieude_Can Ho Mini Duplex Full NT May Giat Rieng Ngay Vo Van Kiet - Song Hanh,0.000115758885
+cat__tieude_Cho thue can ho tach bep 45m2 co may giat rieng ban cong gan Horizon Tower Cho Tan Dinh,0.00011342055
+cat__tieude_Phòng Tỉnh lộ 10 Tân Tạo A,0.000112196634
+cat__tieude_CAN HO 2 phong ngu full noi that co ban cong lon ngay vong xoay Phu Huu gan Q2 va Q9,0.00010397349
+cat__tieude_Phòng trọ Tân Thạnh Đông 2PN 2WC,0.00010280649
+cat__tieude_CHO THUE CAN HO CO GAC CUA SO TROI QUANH PHONG SIEU DEP,0.000101932186
+cat__tieude_Phòng cao cấp khu Tên Lửa,9.922292e-05
+cat__tieude_Phòng mặt tiền Phạm Văn Bạch,8.847643e-05
+cat__dientich_24 m,7.726799e-05
+cat__tieude_Phòng gác sạch đẹp Bà Điểm,7.593986e-05
+cat__dientich_80 m,7.179003e-05
+cat__dientich_78 m,6.319849e-05
+cat__tieude_Phòng trọ cao cấp Trung Lập Thượng,5.6191573e-05
+cat__tieude_Nhà Mã Lò 2PN,5.2172276e-05
+cat__tieude_CAN HO CAO CAP - DAY DU TIEN NGHI - BAN CONG,5.0038077e-05
+cat__tieude_Chung cư Hòa Hảo P5 Quận 10,2.8289569e-05
+cat__tieude_Nhà Hương Lộ 2 rộng,2.4501094e-05
+cat__tieude_Sieu Pham Duplex 30m2 Full Noi That Ngay Dai Hoc Van Hien,1.7932556e-05
+cat__tieude_CHDV Cao cap day du tien nghi Ban cong - Cua so troi ngay tai Khuong Viet - Quan 11,8.86553e-06
+cat__tieude_Nhà KDC Cát Lái,8.82079e-06
+cat__tieude_Chung cư Thái An Nguyễn Văn Quá Q12,3.7303917e-06
+cat__tieude_Cho thue can ho mini dep trong nha moi hien dai 7 tang view tang thuong dep,0.0
+cat__tieude_Cho thue can ho mini duong 17A nha moi xay day du noi that gia 5.5 trieu / thang vao o duoc,0.0
+cat__tieude_Cho thue can ho mini full noi that ban cong thoang Nguyen Huu Canh Binh Thanh,0.0
+cat__tieude_Cho thue can ho mini full noi that khu vuc trung tam tp,0.0
+cat__tieude_Cho thue can ho mini full noi that tai Binh Thanh,0.0
+cat__tieude_Cho thue can ho mini gia re duong Pham Hung tien di Trung Son Q7,0.0
+cat__tieude_Cho thue can ho mini gia sieu rong 60m2 full noi that ban cong duong Pham Hung,0.0
+cat__tieude_Cho thue can ho mini moi day du noi that ngay canh sieu thi Aeon Mall Binh Tan,0.0
+cat__tieude_Cho thue can ho mini tai khu dan cu Trung Son Xa Binh Hung Huyen Binh Chanh Ho Chi Minh,0.0
+cat__tieude_Cho thue can ho moi 100% gan SECC UFM KCX TDTU Quan 1 Quan 4 Quan 7,0.0
+cat__tieude_Chung cư Lê Hồng Phong Q5,0.0
+cat__tieude_Chung cư Nguyễn Thị Minh Khai Q3,0.0
+cat__tieude_Chung cư Nguyễn Tri Phương P8 Q5,0.0
+cat__tieude_Cho thue can ho tien nghi duong Pham Hung noi dai ban cong full noi that,0.0
+cat__tieude_Cho thue chdv Cat Lai 40m2 1pn 1pk full nt o duoc ngay,0.0
+cat__tieude_Cho thue chdv Cat Lai gan citisoho 1pn 1pk sieu rong 40m2 co thang may Gia 4tr8 full nt,0.0
+cat__tieude_Cho thue chmn full noi that Quan 8,0.0
+cat__tieude_Cho thue duplex ban cong sang gan Vincom Le Van Viet Citigym nga 4 Thu Duc Xa lo Ha Noi,0.0
+cat__tieude_Cho thue phong tro co gac - Nguyen Ngoc Loc Quan 10 - Gan Y Duoc,0.0
+cat__tieude_Cho thue studio full noi that,0.0
+cat__tieude_Cho thue studio full noi that – sat san bay – Tan Binh – o lien,0.0
+cat__tieude_Chung cư 08 Bà Huyện Thanh Quan Q3,0.0
+cat__tieude_Chung cư 319 Lý Thường Kiệt Quận 11,0.0
+cat__tieude_Căn góc Screc 2PN Q3,0.0
+cat__tieude_Căn góc Screc 3PN Q3,0.0
+cat__tieude_Căn hộ 1 phòng ngủ cao cấp Quận 7,0.0
+cat__tieude_Chung cư Bắc Hải Quận 10,0.0
+cat__tieude_Chung cư CMT8 Bến Thành Q1,0.0
+cat__tieude_Chung cư Cao Thắng Quận 10,0.0
+cat__tieude_Chung cư Central Phạm Văn Hai,0.0
+cat__tieude_Chung cư Cống Quỳnh Quận 1,0.0
+cat__tieude_Chung cư Hoa Sen Lạc Long Quân Quận 11,0.0
+cat__tieude_Chung cư Hoa Sen gần Đầm Sen,0.0
+cat__tieude_Chung cư Kim Tâm Hải Trường Chinh Q12,0.0
+cat__tieude_Chung cư Kỳ Đồng Q3,0.0
+cat__tieude_Chung cư Lakai Nguyễn Tri Phương P8 Q5,0.0
+cat__tieude_Chung cư Lakai Nguyễn Tri Phương Q5,0.0
+cat__tieude_Chung cư Lê Duẩn Bến Thành Q1,0.0
+cat__tieude_Căn hộ 2PN Trần Quang Diệu Quận 3,0.0
+cat__tieude_Căn hộ 2PN full nội thất Tân Quy Q7,0.0
+cat__tieude_Căn hộ 2PN riêng biệt gần ĐH Bách Khoa Q10,0.0
+cat__tieude_Chung cư Nguyễn Trãi Bến Thành Q1,0.0
+cat__tieude_Chung cư Nguyễn Trãi P9 Quận 1,0.0
+cat__tieude_Chung cư Thái An 4 Nguyễn Văn Quá Q12,0.0
+cat__tieude_Chung cư Topaz Home Phan Văn Hớn Q12,0.0
+cat__tieude_Chung cư Tân Phước Lý Thường Kiệt Quận 11,0.0
+cat__tieude_Cuc pham can ho studio ngay cau Nguyen Van Cu Q8 di chuyen giua cac Q4 Q5 Q1 200m la den,0.0
+cat__tieude_Căn 1PN An Khánh,0.0
+cat__tieude_Căn 2PN An Dương Vương P3 Q5,0.0
+cat__tieude_Căn hộ Phúc Thịnh Quận 5,0.0
+cat__tieude_Căn hộ Screc 1PN Q3,0.0
+cat__tieude_Căn hộ Screc 3PN 107m2 Q3,0.0
+cat__tieude_Căn hộ Screc Trường Sa Quận 3,0.0
+cat__tieude_Căn hộ Solari BS 1PN+,0.0
+cat__tieude_Căn hộ 1PN 45m2 Q2,0.0
+cat__tieude_Căn hộ 1PN Lê Thị Riêng Quận 1,0.0
+cat__tieude_Căn hộ 1PN Nguyễn Khoái Q4,0.0
+cat__tieude_Căn hộ 1PN ban công Khánh Hội Q4,0.0
+cat__tieude_Căn hộ 1PN ban công gần cầu Nguyễn Văn Cừ Q8,0.0
+cat__tieude_Căn hộ 1PN chung cư Thái An 2 Q12,0.0
+cat__tieude_Căn hộ 1PN mới 100% Tân Phú Q7,0.0
+cat__tieude_Căn hộ 1PN+ full nội thất Quận 9,0.0
+cat__tieude_Căn hộ 25m2 Cư xá Lữ Gia Q11,0.0
+cat__tieude_Căn hộ 2PN 2WC KDC Him Lam Q7,0.0
+cat__tieude_Căn hộ ban công tách bếp Trần Quang Khải,0.0
+cat__tieude_Căn hộ bancol siêu rộng Hậu Giang Q6,0.0
+cat__tieude_Căn hộ cao cấp CMT8 Quận 10,0.0
+cat__tieude_Căn hộ cao cấp CMT8 gần CV Lê Thị Riêng,0.0
+cat__tieude_Căn hộ cao cấp full nội thất Quận 7,0.0
+cat__tieude_Căn hộ cao cấp khu Bình Phú,0.0
+cat__tieude_Căn hộ 40m2 full nội thất trung tâm Quận 5,0.0
+cat__tieude_Căn hộ C5 Phạm Hùng Quận 8,0.0
+cat__tieude_Căn hộ City Gate Võ Văn Kiệt 3PN,0.0
+cat__tieude_Căn hộ City Gate nhà trống,0.0
+cat__tieude_Căn hộ Felisa P9Q8,0.0
+cat__tieude_Căn hộ Nguyễn Duy Trinh,0.0
+cat__tieude_Căn hộ Phú Thọ 3 phòng ngủ,0.0
+cat__tieude_CHO THUE CAN HO MINI DAY DU TIEN NGHI GAN DH TDTU RMIT DH CANH SAT,0.0
+cat__tieude_CHO THUE CAN HO MINI FULL NOI THAT CO CUA SO LON NGAY LOTTE MART GAN CAU KENH TE,0.0
+cat__tieude_CHO THUE CAN HO MINI NGAY QUAN 3 GAN CV LE VAN TAM HO CON RUA FULL NOI THAT CUA SO TROI TO,0.0
+cat__tieude_CHO THUE CAN HO MINI STUDIO CUA SO SAN NOI THAT MOI 100%,0.0
+cat__tieude_CHO THUE CAN HO MINI TACH BEP VAN KIEP BINH THANH GAN CHO BA CHIEU LE VAN DUYET GIAP QUAN 1,0.0
+cat__tieude_CHO THUE CAN HO QUAN 1 GIA RE T4/2025,0.0
+cat__tieude_CAN HO 1PN 40m2 FULL NOI THAT CUA SO BAN CONG THOANG SANG O BINH THANH GIAP Q3,0.0
+cat__tieude_CHO THUE CAN HO STUDIO 2 PHONG NGU TAI TRUNG TAM TP HCM,0.0
+cat__tieude_Căn hộ Tara Residence Quận 8,0.0
+cat__tieude_Căn hộ Thanh Nhựt P7Q8,0.0
+cat__tieude_Căn hộ The Origami Vinhomes Grand Park,0.0
+cat__tieude_Căn hộ Thảo Điền nội thất bếp WC riêng,0.0
+cat__tieude_Căn hộ Tản Đà Court Quận 5,0.0
+cat__tieude_Căn hộ ban công Hồng Bàng Cây Gõ Quận 6,0.0
+cat__tieude_Căn hộ ban công Nguyễn Thái Bình gần chợ Bến Thành,0.0
+cat__tieude_Căn hộ ban công khu dân cư yên tĩnh Q4,0.0
+cat__tieude_Căn hộ duplex 40m2 Tân Quy Q7,0.0
+cat__tieude_Căn hộ duplex ban công Huỳnh Tấn Phát Q7,0.0
+cat__tieude_Căn hộ duplex ban công Tân Quy Q7,0.0
+cat__tieude_Căn hộ dịch vụ Tôn Đản Q4,0.0
+cat__tieude_Căn hộ dịch vụ ban công Dương Bá Trạc Q8,0.0
+cat__tieude_Căn hộ dịch vụ mới khai trương Quận 6,0.0
+cat__tieude_Căn hộ dịch vụ đường số 1 P10,0.0
+cat__tieude_Căn hộ full nội thất Nguyễn Văn Luông Q6,0.0
+cat__tieude_Căn hộ full nội thất ban công lớn trung tâm Quận 7,0.0
+cat__tieude_Căn hộ full nội thất trung tâm Q4,0.0
+cat__tieude_Căn hộ full nội thất tách bếp Q4,0.0
+cat__tieude_CHO THUE CAN HO CAO CAP TAI QUAN 7 FULL NOI THAT,0.0
+cat__tieude_CHO THUE CAN HO FULL NOI THAT CUA SO DON NANG CACH QUAN 1 500M,0.0
+cat__tieude_CHO THUE CAN HO FULL NOI THAT – CUA SO RONG THOANG MAT,0.0
+cat__tieude_Căn hộ gác lửng full tiện nghi Lý Thường Kiệt,0.0
+cat__tieude_Căn hộ gác lửng mới 100% Tăng Nhơn Phú,0.0
+cat__tieude_Căn hộ mini Tám Danh P4 Q8,0.0
+cat__tieude_Căn hộ mini duplex Võ Văn Kiệt Song Hành,0.0
+cat__tieude_Căn hộ mini mới xây ở Củ Chi,0.0
+cat__tieude_Căn hộ mới full nội thất Lý Thái Tổ,0.0
+cat__tieude_Căn hộ mới gần cầu vượt Cây Gõ Quận 6,0.0
+cat__tieude_Căn hộ mới đẹp thoáng Quận 7,0.0
+cat__tieude_Căn hộ officetel Vinhomes Grand Park,0.0
+cat__tieude_Căn hộ studio 2 phòng ngủ Tôn Đản Q4,0.0
+cat__tieude_Căn hộ studio 2 phòng ngủ trung tâm Q4,0.0
+cat__tieude_Căn hộ studio Bình Thuận Quận 7,0.0
+cat__tieude_Căn hộ studio full nội thất Quận 8,0.0
+cat__tieude_CHO THUE CAN HO STUDIO FULL NOI THAT CUA SO LON THOANG MAT QUAN 8 GAN CAU NGUYEN VAN CU,0.0
+cat__tieude_Căn hộ cửa sổ trời Bến Vân Đồn Q4,0.0
+cat__tieude_Căn hộ duplex 35m2 full nội thất,0.0
+cat__tieude_Căn hộ studio nhà trống Vinhomes Grand Park,0.0
+cat__tieude_Căn hộ thoáng mát Lê Đức Thọ gần CV Làng Hoa,0.0
+cat__tieude_Căn hộ tiện nghi Trần Văn Kiểu Quận 6,0.0
+cat__tieude_Căn hộ tại đường số 3 Trần Não,0.0
+cat__tieude_Căn hộ view bancol Trần Minh Quyền Quận 10,0.0
+cat__tieude_Căn hộ view thoáng full nội thất gần Bách Khoa,0.0
+cat__tieude_Căn hộ xinh xắn hẻm ô tô Trần Quang Diệu,0.0
+cat__tieude_Căn studio full nội thất có ban công Vinhomes Grand Park,0.0
+cat__tieude_DAI HA GIA CAN HO FULL NOI THAT BAN CONG THOANG GAN CONG VIEN HOANG VAN THU,0.0
+cat__tieude_Dung Hinh Dung Gia Can ho mini cho thue Nha moi 100% - Full noi that khu an ninh yen tinh,0.0
+cat__tieude_Duplex Bình Trưng Đông,0.0
+cat__tieude_Duplex Lê Hữu Kiều,0.0
+cat__tieude_Duplex Nguyễn Thị Định,0.0
+cat__tieude_Duplex ban công gần cầu Tân Thuận,0.0
+cat__tieude_Căn hộ full nội thất vòng xoay Dân Chủ,0.0
+cat__tieude_Căn hộ full nội thất đường Tên Lửa,0.0
+cat__tieude_Duplex mới Ngã Tư Ga Quận 12,0.0
+cat__tieude_Duplex sieu xin noi that co ban gia tot ngay Ba Hom - Tinh lo 10,0.0
+cat__tieude_Dự án mới gần kênh 19/5 Tây Thạnh,0.0
+cat__tieude_Em chinh chu cho thue phong nay 35M2 Tach Bep Cua so thoang,0.0
+cat__tieude_GIAM 500K TRONG 3 THANG DAU Can_ho_Mini_cao_cap_moi SAT VACH_Aeon_Mall_Binh_Tan O tu 1-3 nguoi,0.0
+cat__tieude_Gác ban công rộng Nguyễn Thị Thập Q7,0.0
+cat__tieude_Gác lửng full nội thất gần ĐH Bách Khoa,0.0
+cat__tieude_Gác lửng tiện nghi cạnh Aeon Tân Phú,0.0
+cat__tieude_Gác lửng đầy đủ tiện nghi Lý Thường Kiệt,0.0
+cat__tieude_Hệ thống căn hộ studio duplex 1PN 2PN Q4,0.0
+cat__tieude_KHAI TRUONG CAN HO DAY DU TIEN NGHI PHONG RONG THOANG GIA TOT AN NINH YEN TINH,0.0
+cat__tieude_KHAI TRUONG CHDV FULL NOI THAT MOI 100% NGAY MAT TIEN DUONG THAI PHIEN GIAO BINH THOI,0.0
+cat__tieude_KHAI TRUONG STUDIO Full noi that Cao Cap ngay cau Nguyen Van Cu,0.0
+cat__tieude_KTX Happy House trung tâm,0.0
+cat__tieude_KTX Phan Đình Phùng,0.0
+cat__tieude_Căn hộ studio full nội thất cao cấp Quận 8,0.0
+cat__tieude_Cho Thue Can Ho Moi Tinh - Nguyen Dinh Chieu - Q3,0.0
+cat__tieude_Cho Thue Can Ho Studio Gan Van Hanh Mall Tren Duong Cach Mang Thang 8 Quan 10,0.0
+cat__tieude_KTX sleepbox full nội thất Thủ Đức,0.0
+cat__tieude_Khai Truong CHDV Moi Xay Full Noi that Ban Cong Cua so troi ngay Khuong Viet,0.0
+cat__tieude_Khai Truong Can Ho Cao Cap Moi Tai Nga Tu RMK,0.0
+cat__tieude_Khai Truong Can Ho Gia Re Full NT - Smart TiVi Ngay Nga Tu An Suong - CVPM Quang Trung,0.0
+cat__tieude_Khai Truong Phong Moi Full Noi That,0.0
+cat__tieude_Khai Truong Toa Nha Moi Xay Co Gac Y Hinh ngay Van Than Quan 6,0.0
+cat__tieude_Khai truong CH may giat rieng moi 100% gan Dam Sen nga tu 4 xa,0.0
+cat__tieude_Khai truong Studio + Duplex ban cong gan Dai hoc FPT Lang Dai hoc Hoang Huu Nam Le Van Viet,0.0
+cat__tieude_Khai truong can phong moi co cua so sieu mat nam ngay Quan 12,0.0
+cat__tieude_Khai truong toa nha fullNT moi 100% Nguyen Trai ngay sau toa Lancaster Legacy hem Oc Dao Quan 1,0.0
+cat__tieude_Khai truong toa nha ngay Hai Ba Trung - Dinh Cong Trang gan nha tho Hong Tan Dinh Quan 1 giap Quan 3,0.0
+cat__tieude_Khai trương nhà mới 1-2 phòng ngủ Quận 4,0.0
+cat__tieude_Khai trương toà nhà mới Ngã 6 Phù Đổng,0.0
+cat__tieude_Duplex full nội thất,0.0
+cat__tieude_KTX gần Học Viện Hàng Không,0.0
+cat__tieude_Cho thue Studio full noi that thang may gan cc Phan Xich Long,0.0
+cat__tieude_Cho thue can Ho mini full noi that chi 4tr3 25m2 phong,0.0
+cat__tieude_Cho thue can ho 1 phong ngu gia siu hat de cho sinh vien Luong Nhu Hoc Quan 5 gan vong xoay PDP,0.0
+cat__tieude_Cho thue can ho 2PN Quan 8 - Full noi that,0.0
+cat__tieude_Cho thue can ho 30m2 duplex co ban cong full noi that an ninh tien nghi gia sieu uu dai cho HSSV,0.0
+cat__tieude_Cho thue can ho Duplex gan vong xoay Le Dai Hanh,0.0
+cat__tieude_Cho thue can ho chung cu mini 2PN Quan 10 gan Toa nha Viettel,0.0
+cat__tieude_Cho thue can ho cua so gan cong vien Le Thi Rieng - Cho Ben Thanh - Cau Ba Son - Nguyen Hue,0.0
+cat__tieude_Cho thue can ho dich vu mini noi that nhu hinh 2 PN 2 WC view song mat me,0.0
+cat__tieude_Cho thue can ho full noi that sat ben Lottemart cau Kinh Te DH TDT gan trung tam Q1,0.0
+cat__tieude_Cho thue can ho mini 32m2 - 7tr gan duong Tran Nao P An Khanh Q2,0.0
+cat__tieude_Cho thue can ho mini 35m2 quan 7 gan Lotte Cau Kenh Te Cau Tan Thuan Tay thuan tien qua Q1 Q4,0.0
+cat__tieude_Cho thue can ho mini Le Duc Tho Go Vap,0.0
+cat__tieude_Cho Thue Can Ho Mini full Noi That - Lien Phuong Q9 - Gia 3tr6 Co Ban Cong view Binh Minh sieu dep,0.0
+cat__tieude_Khai trương tòa nhà fullNT mới 100% Nguyễn Trãi,0.0
+cat__tieude_Kiot mặt tiền Nguyễn Duy Trinh gần chợ Long Trường,0.0
+cat__tieude_Ký túc xá An Dương Vương gần ĐH Sư Phạm,0.0
+cat__tieude_Ký túc xá Futahouse Bình Thạnh,0.0
+cat__tieude_Ký túc xá Quận 8 Hẻm C4 Phạm Hùng,0.0
+cat__tieude_Ký túc xá mới gần ĐH Công Nghiệp,0.0
+cat__tieude_Ký túc xá nữ gần Đại học Văn Hiến,0.0
+cat__tieude_Ký túc xá sinh viên gần HUIT,0.0
+cat__tieude_Ký túc xá sleepbox Quận 4,0.0
+cat__tieude_Ký túc xá sleepbox Quận 8,0.0
+cat__tieude_Ký túc xá sleepbox mới xây QL13,0.0
+cat__tieude_Ký túc xá sleepbox ở ghép Quận 7,0.0
+cat__tieude_Ký túc xá sleepbox ở ghép Quận 8,0.0
+cat__tieude_Ký túc xá trung tâm Bình Thạnh,0.0
+cat__tieude_Ký túc xá tư nhân mới xây gần Lê Đức Thọ,0.0
+cat__tieude_KTX Quận 5 Quận 10 Phú Nhuận,0.0
+cat__tieude_Nhà Hương Lộ 2 3PN,0.0
+cat__tieude_Moi khai truong ngay Truong Chinh CHDV full noi that,0.0
+cat__tieude_Mặt bằng trệt 230m2 Cát Lái,0.0
+cat__tieude_Mặt tiền hẻm xe hơi đường 3 tháng 2,0.0
+cat__tieude_NGAT NGAY CON GA TAY VOI DANG PHONG STUDIO FULL NOI THAT GIA CHI TU 6XXX,0.0
+cat__tieude_NGAY DAI HOC SU PHAM CAN HO MOI DEP DUONG AN DUONG VUONG QUAN 5,0.0
+cat__tieude_CHO THUE CAN HO SACH SE - THOANG MAT MOI NGAY HOA BINH,0.0
+cat__tieude_NGAY NGA 4 THU DUC LE VAN VIET Phong full noi that rong rai an ninh,0.0
+cat__tieude_Ngay UTC2 chua den 1km phong full noi that co thang may di chuyen,0.0
+cat__tieude_Nha Nguyen Can Gia Re Full Noi That Gia Re Ngay Nguyen Thi Minh Khai,0.0
+cat__tieude_Nhà 2PN hẻm xe hơi,0.0
+cat__tieude_Nhà 2PN hẻm xe tải,0.0
+cat__tieude_Nhà Lê Văn Quới,0.0
+cat__tieude_Nhà Lê Đình Cẩn mới,0.0
+cat__tieude_Nhà Lưu Nhân Chú,0.0
+cat__tieude_Nhà Mai Văn Ngọc,0.0
+cat__tieude_Nhà Nguyễn Chí Thanh,0.0
+cat__tieude_Nhà Nguyễn Chế Nghĩa,0.0
+cat__tieude_Nhà Nguyễn Gia Trí mặt tiền,0.0
+cat__tieude_Nhà Nguyễn Hữu Cảnh 2PN,0.0
+cat__tieude_Nhà Nguyễn Kiệm,0.0
+cat__tieude_Nhà Nguyễn Quý Yêm 3PN,0.0
+cat__tieude_Nhà Bình Chánh 1 trệt 1 gác,0.0
+cat__tieude_Nhà Bình Chánh Phạm Hùng,0.0
+cat__tieude_Nhà Gò Vấp 3PN,0.0
+cat__tieude_Nhà Hiệp Bình Phước,0.0
+cat__tieude_Nhà Huỳnh Tấn Phát Phú Thuận,0.0
+cat__tieude_Cho Thue Phong Duplex dt 35m2 Full noi that view dep Mai Van Vinh Quan 7 cach Lotte mart 500m,0.0
+cat__tieude_Cho Thue Phong Gia Tot Dep Full Noi That Cua So Thoang bancony Ngay Binh Thoi Q11,0.0
+cat__tieude_Cho Thue Phong Tro Quan 6 Gia Mem Mai,0.0
+cat__tieude_Cho Thue Phong tach bep 2 ban cong - Le Van Luong - Tan Phong - Quan 7 - LOTTE MART - SC VIVO 5p,0.0
+cat__tieude_Cho Thue can 20m vuong 3.5tr dia chi 134 CMT8 Phuong 10 Q3 doi dien toa nha viettel,0.0
+cat__tieude_Cho nữ thuê phòng gần cầu Nguyễn Tri Phương,0.0
+cat__tieude_Cho nữ thuê phòng trọ sạch sẽ,0.0
+cat__tieude_Cho thue CH ban cong ngay vong xoay Phu Huu sat chung cu Khang Dien,0.0
+cat__tieude_Cho thue CH mini Full noi that - ban cong to gan cho Ba Chieu giap Q1,0.0
+cat__tieude_Cho thue CHMN day du tien nghi thang may bao ve tai Bach Dang Tan Binh HCM,0.0
+cat__tieude_Cho thue Can ho cao cap Mini Gia Re chi Tu 3tr/thang o lien duoc,0.0
+cat__tieude_Cho thue Can ho mini 35m2 Thang may khu Bat Nan P Thanh My Loi Q2,0.0
+cat__tieude_Can ho moi xay Full noi that moi 100%,0.0
+cat__tieude_Can ho moi xay KDC Trung Son ke Q7 thiet ke hien dai gia re,0.0
+cat__tieude_Can ho moi xay day du noi that ngay mat tien Xa Lo Ha Noi nga 4 Thu Duc view cuc dinh,0.0
+cat__tieude_Nhà Lê Trọng Tấn 2 mặt tiền,0.0
+cat__tieude_Nhà Tân Sơn hẻm 525,0.0
+cat__tieude_Nhà Võ Duy Ninh 2PN,0.0
+cat__tieude_Nhà Nguyễn Văn Lượng Gò Vấp,0.0
+cat__tieude_Nhà Nguyễn Đình Khơi,0.0
+cat__tieude_Nhà Ngô Chí Quốc,0.0
+cat__tieude_Nhà Ni Sư Huỳnh Liên,0.0
+cat__tieude_Nhà Phan Văn Trị 2 ban công,0.0
+cat__tieude_Nhà Phạm Văn Chiêu,0.0
+cat__tieude_Nhà Q4 diện tích sử dụng 95m2,0.0
+cat__tieude_Nhà Quang Trung 2PN,0.0
+cat__tieude_Nhà Quận 1 Nguyễn Cảnh Chân,0.0
+cat__tieude_Nhà Liên Khu 5-6,0.0
+cat__tieude_Nhà Lê Trọng Tấn,0.0
+cat__tieude_Nhà cấp 4 Huỳnh Tấn Phát,0.0
+cat__tieude_Nhà cấp 4 Nguyễn Văn Lượng,0.0
+cat__tieude_Nhà cấp 4 nguyên căn 52m2,0.0
+cat__tieude_Nhà gần KCN Lê Minh Xuân,0.0
+cat__tieude_Nhà gần Phạm Văn Đồng 2PN,0.0
+cat__tieude_Nhà gần chợ Gò Vấp,0.0
+cat__tieude_Nhà hẻm Bà Lê Chân gần chợ Tân Định,0.0
+cat__tieude_Nhà hẻm Trung Mỹ Tây 3,0.0
+cat__tieude_Nhà hẻm Tôn Đản 2 lầu 2 phòng ngủ,0.0
+cat__tieude_Nhà Quận 10 Hồ Thị Kỷ,0.0
+cat__tieude_Nhà Quận 4 an ninh yên tĩnh,0.0
+cat__tieude_Nhà Quốc Lộ 13,0.0
+cat__tieude_Nhà Tam Phú mặt tiền,0.0
+cat__tieude_Nhà Tân Phú 2 mặt hẻm,0.0
+cat__tieude_Nhà Tân Phú 3PN,0.0
+cat__tieude_Nhà Tân Sơn Nhì,0.0
+cat__tieude_CHDV mới 100% Galaxy Kinh Dương Vương Bà Hom,0.0
+cat__tieude_CHDV studio có ban công gần Đảo Kim Cương,0.0
+cat__tieude_CHDV toilet và bếp riêng Lê Văn Lương,0.0
+cat__tieude_CHDV vòng xoay Phú Lâm,0.0
+cat__tieude_CHDV đầy đủ tiện nghi Quận 6,0.0
+cat__tieude_CHINH CHU CAN CHO THUE CHDV - BAN CONG - 35M2 - GAN DAM SEN - NGA 4 LUY BAN BICH - AEON MALL TAN PHU,0.0
+cat__tieude_CHINH CHU CHO THUE CAN HO BAN CONG DAY DU NOI THAT - NGAY KHU K300 LOTTE CONG HOA,0.0
+cat__tieude_CHINH CHU CHO THUE CAN HO MINI CAO CAP MAY GIAT RIENG 40M2 FULL NOI THAT QUANG TRUNG P10 GO VAP,0.0
+cat__tieude_CHINH CHU KHAI TRUONG TOA CAN HO BAN CONG MOI GIAP TRUONG VAN BANG,0.0
+cat__tieude_CHINH CHU STUDIO BANCONG SIEU RONG DAY DU NT NHU ANH,0.0
+cat__tieude_CHINH CHU STUDIO BEP RIENG CO CUA SO SAN NOI THAT NGAY DAI HOC VLU,0.0
+cat__tieude_CHINH CHU STUDIO CUA SO DAY DU NOI THAT GIU PHONG DAU THANG 10,0.0
+cat__tieude_CHMN MOI 100% – TOA NHA VUA HOAN THIEN – TIEN NGHI DAY DU 2147 BUI DINH TUY,0.0
+cat__tieude_Nhà chính chủ gần Sở Thú,0.0
+cat__tieude_Nhà có gác lửng Trần Phú,0.0
+cat__tieude_Nhà cấp 4 60m2 Bình Tân,0.0
+cat__tieude_Can ho rieng biet nguyen lau - May giat bep rieng,0.0
+cat__tieude_Can ho studio_1PN full noi that gan cau Khanh Hoi sat Quan 4,0.0
+cat__tieude_Can ho tach bep san thuong gan Satra Pham Hung,0.0
+cat__tieude_Chdv Cat Lai gan citisoho co thang may full noi that DT 35m2 1pn 1pk tach bep 4tr2-5tr2,0.0
+cat__tieude_Chinh chu cho thue can ho full noi that trong khu dan cu cao cap Binh Chanh giap Q8,0.0
+cat__tieude_Chinh chu_Phong noi that sat ben Truong dua Phu Tho Toa nha Flemington Q11,0.0
+cat__tieude_Cho Thue Can Ho 2PN Quan 12 Ngay Cau Tham Luong Truong Chinh,0.0
+cat__tieude_Cho Thue Can Ho Day Du Tien Nghi Quan 1,0.0
+cat__tieude_Cho Thue Can Ho Dich Vu Moi Xay 100% Dien Tich 30m Ngay Nga Tu Bon Xa,0.0
+cat__tieude_Cho Thue Can Ho Full Noi That Ngay Vong Xoay Dan Chu Huong Ra Q1 Q3 Q4 Q5,0.0
+cat__tieude_Cho Thue Can Ho Mini Cua So Lon Full Noi That Nguyen Than Hien Q4,0.0
+cat__tieude_Cho Thue Can Ho Mini Studio Ban Cong Full Noi That | Duong Hoang Hoa Tham Tan Binh - Gan K300 Etown,0.0
+cat__tieude_Cho Thue Can Ho Mini Tran Hung Dao Quan 5,0.0
+cat__tieude_Can ho mini 45m2 co ban cong full noi that Ton That Thuyet P16 Q4,0.0
+cat__tieude_Can ho mini 45m2 full noi that Bep tach phong ngu Ton That Thuyet P16 Q4,0.0
+cat__tieude_Can ho mini 50 m2 full noi that cao cap - ban cong rieng cua so lon khu Ten Lua,0.0
+cat__tieude_Nhà mới xây TA11 đầy đủ nội thất,0.0
+cat__tieude_Nhà nguyên căn 1 trệt 1 lầu,0.0
+cat__tieude_Nhà nguyên căn An Dương Vương,0.0
+cat__tieude_CHMN full nội thất Quận 8,0.0
+cat__tieude_CHMN moi gan nga 4 Au Co- Lac Long Quan,0.0
+cat__tieude_Nhà kiot gần sân bay,0.0
+cat__tieude_Nhà mặt tiền Cư xá Lữ Gia,0.0
+cat__tieude_Nhà mặt tiền Lê Quyên,0.0
+cat__tieude_Nhà mặt tiền Phạm Văn Xảo,0.0
+cat__tieude_Nhà mặt tiền Quang Trung,0.0
+cat__tieude_Nhà mặt tiền Tuệ Tĩnh,0.0
+cat__tieude_Nhà mặt tiền hẻm Bến Phú Định,0.0
+cat__tieude_Nhà hẻm xe hơi Trần Quang Diệu,0.0
+cat__tieude_CHDV full nội thất trung tâm Quận 6,0.0
+cat__tieude_Can ho Thao Dien noi that bep + wc rieng,0.0
+cat__tieude_Can ho cao cap gan nha tho Nam Hai - Parcmall Q8,0.0
+cat__tieude_Nhà nguyên căn Bình Tân 2PN,0.0
+cat__tieude_Nhà nguyên căn Cách Mạng Tháng Tám,0.0
+cat__tieude_Nhà nguyên căn Gò Vấp 1 trệt 1 lầu,0.0
+cat__tieude_Nhà nguyên căn Hiệp Thành gần chợ,0.0
+cat__tieude_Nhà nguyên căn Hoàng Sa,0.0
+cat__tieude_Nhà nguyên căn KDC Phú Nhuận Lê Thị Riêng,0.0
+cat__tieude_Nhà nguyên căn Long Trường gần cầu Ông Nhiêu,0.0
+cat__tieude_Nhà nguyên căn Lê Thị Bạch Cát,0.0
+cat__tieude_Nhà nguyên căn Lê Văn Sỹ,0.0
+cat__tieude_Nhà mặt tiền nhỏ Nguyễn Sơn Hà,0.0
+cat__tieude_Nhà mặt tiền Đinh Đức Thiện,0.0
+cat__tieude_Nhà mới duplex ban công cửa sổ,0.0
+cat__tieude_Nhà mới hoàn thiện Tôn Thất Thuyết,0.0
+cat__tieude_Nhà mới xây Bình Tân,0.0
+cat__tieude_Nhà nguyên căn BTCT Hiệp Thành,0.0
+cat__tieude_Nhà nguyên căn Bình Tiên,0.0
+cat__tieude_Can ho mini 50 met vuong Ten Lua-gan Aeon Binh Tan,0.0
+cat__tieude_Can ho mini Duong Tam Danh P4 Q8,0.0
+cat__tieude_Can ho mini Q3 - chi 6.5tr/thang - thang may FaceID,0.0
+cat__tieude_Can ho mini Studio CMT8 Quan 10 Gan Ga Sai Gon Vong xoay Dan Chu mat 3-5 Phut di chuyen cac quan,0.0
+cat__tieude_Can ho mini co gac - gieng troi sieu thoang mat CMT8 Q10 - Vao la o ngay,0.0
+cat__tieude_Can ho mini day du tien nghi xinh xan nam ngay cho Bau Sen Q5,0.0
+cat__tieude_Can ho mini dep gia tot - cua so - full noi that - gan ngay Lotte mart Nguyen Van Luong,0.0
+cat__tieude_Can ho mini full noi that Tien ich xung quanh,0.0
+cat__tieude_Can ho mini full noi that moi xay 100% - Gan sat DH Van Hien,0.0
+cat__tieude_Can ho mini hem 36/ Cu Lao fnt bep an ninh yen tinh tu do,0.0
+cat__tieude_Can ho mini sat chan cau Nguyen Van Cu P1 Q8 gio tu do du tien nghi an ninh 24/7 4 ban 4 xe,0.0
+cat__tieude_Can ho mini sieu xin so ngay trung tam Quan 5,0.0
+cat__tieude_Can ho moi duong Nguyen Trung Truc Binh Thanh,0.0
+cat__tieude_Can ho Pham Hung/Parc Mall Quan 8 40m2 full noi that 5.9 trieu/thang,0.0
+cat__tieude_Nhà nguyên căn giá rẻ 65m2,0.0
+cat__tieude_Nhà nguyên căn gần chợ Bến Thành,0.0
+cat__tieude_Nhà nguyên căn gần cầu Bà The,0.0
+cat__tieude_Nhà nguyên căn gần Đại học Tôn Đức Thắng,0.0
+cat__tieude_Nhà nguyên căn gần đường 3/2,0.0
+cat__tieude_Nhà nguyên căn Nguyễn Duy Dương,0.0
+cat__tieude_Nhà nguyên căn Nguyễn Thị Định,0.0
+cat__tieude_Nhà nguyên căn Nguyễn Trãi full nội thất,0.0
+cat__tieude_Nhà nguyên căn Nguyễn Đình Chiểu,0.0
+cat__tieude_Nhà nguyên căn Ngã 4 Trung Chánh,0.0
+cat__tieude_Nhà nguyên căn Phan Văn Trị,0.0
+cat__tieude_Nhà nguyên căn Phước Thiện,0.0
+cat__tieude_Nhà nguyên căn Quận 4 Đoàn Văn Bơ,0.0
+cat__tieude_Nhà nguyên căn Thạnh Lộc,0.0
+cat__tieude_Nhà nguyên căn Trần Hưng Đạo,0.0
+cat__tieude_Nhà nguyên căn hẻm xe hơi,0.0
+cat__tieude_Nhà nguyên căn hẻm xe hơi Quận 10,0.0
+cat__tieude_Nhà nguyên căn hẻm xe hơi Trần Xuân Soạn,0.0
+cat__tieude_Nhà nguyên căn mặt tiền Phong Phú,0.0
+cat__tieude_Nhà nguyên căn mặt tiền hẻm xe hơi Nguyễn Thần Hiến,0.0
+cat__tieude_Nhà nguyên căn mới 100% full nội thất,0.0
+cat__tieude_Nhà nguyên căn mới xây có nội thất cơ bản,0.0
+cat__tieude_Nhà nguyên căn mới xây gần khu công nghệ cao,0.0
+cat__tieude_Nhà nguyên căn sau chợ Phú Lâm,0.0
+cat__tieude_Nhà nguyên căn trung tâm Quận 4,0.0
+cat__tieude_Nhà nguyên căn Trần Quang Khải Tân Định,0.0
+cat__tieude_Nhà nguyên căn Trần Quốc Toản,0.0
+cat__tieude_Nhà nguyên căn Tô Hiến Thành gần ĐH Bách Khoa,0.0
+cat__tieude_Nhà nguyên căn Tôn Thất Thuyết,0.0
+cat__tieude_Nhà nguyên căn Tôn Đản,0.0
+cat__tieude_Nhà nguyên căn full nội thất gần FPT,0.0
+cat__tieude_CH MOI 100% NGAY NGUYEN VAN LUONG DH VAN LANG IUH,0.0
+cat__tieude_CH mini có ban công khu Tanimex Tô Ký,0.0
+cat__tieude_CHDV Cát Lái 1PN 1PK,0.0
+cat__tieude_CHDV Cát Lái full nội thất có ban công,0.0
+cat__tieude_CHDV Cát Lái gần Citisoho,0.0
+cat__tieude_CHDV Full Noi That ngay vong xoay Phu Lam,0.0
+cat__tieude_CHDV Full noi that Q4 gia re gio tu do,0.0
+cat__tieude_CHDV Moi Full Noi That Gan CV Dam Sen,0.0
+cat__tieude_CHDV Vtower Hồng Bàng Quận 11,0.0
+cat__tieude_CHDV cao cấp Âu Dương Lân Q8,0.0
+cat__tieude_CHDV full nội thất ban công lớn Quận 11,0.0
+cat__tieude_Nhà nguyên căn hẻm 1506 Huỳnh Tấn Phát,0.0
+cat__tieude_Nhà nguyên căn hẻm 467 Lê Đại Hành,0.0
+cat__tieude_Nhà nguyên căn hẻm 6m Lê Thị Riêng,0.0
+cat__tieude_Nhà nguyên căn hẻm Nguyễn Biểu,0.0
+cat__tieude_CAN HO XINH - NHIEU UU DAI - CHOT NGAY CHO CHI NGAY KHU K300 LOTTE CONG HOA TRONG SAN,0.0
+cat__tieude_CAN STUDIO TONE TRANG SANG CUA SO THOANG TAI THANH MY LOI QUAN 2,0.0
+cat__tieude_Can ho dich vu BANCONG RIENG CUA SO THOANG ngay BINH CHANH,0.0
+cat__tieude_Can ho duplex ban cong full noi that ngay Ly Chieu Hoang Giao An Duong Vuong,0.0
+cat__tieude_Can ho duplex day du noi that ngay ben xe An Suong va cong vien phan mem co day du tien nghi,0.0
+cat__tieude_Can ho duplex day du tien nghi ngay DH Kinh Te Tai Chinh Marketing chi tu 5 trieu,0.0
+cat__tieude_Can ho duplex full noi that Quan 4 gan DH Luat NTT thuan tien di chuyen Quan 1 5 7,0.0
+cat__tieude_Can ho duplex gia re Nguyen Thi Minh Khai Q1,0.0
+cat__tieude_Can ho mini - studio - 36 m2 Ly Tu Trong Quan 1,0.0
+cat__tieude_Can ho mini 25m2 - Tran Hung Dao - Quan 5,0.0
+cat__tieude_Can ho mini 32m2 Ban cong Thang may gan Tran Nao Q2 Du noi that moi,0.0
+cat__tieude_Can ho mini 33m2 Thang may gan Vanh Dai Tay P An Khanh Q2,0.0
+cat__tieude_Can ho mini 40m2 1PN 1 PK - 26 Tan Son Nhi Quan Tan Phu Co Thang May,0.0
+cat__tieude_Can Ho Mini ngay khu cong nghe cao - FPT software - Samsung gia Cuc re phong chat luong moi 100%,0.0
+cat__tieude_Can Ho STUDIO Xin hien dai Full NT ngay To Hien Thanh Quan 10,0.0
+cat__tieude_Nhà tầng trệt Cô Giang,0.0
+cat__tieude_Nhà Đỗ Công Tường,0.0
+cat__tieude_Nhà đường Sư Vạn Hạnh gần Mall,0.0
+cat__tieude_CHDV full nội thất chung cư Hoàng Anh Gia Lai,0.0
+cat__tieude_Nhà nguyên căn Âu Dương Lân,0.0
+cat__tieude_Nhà nguyên căn Đặng Nguyên Cẩn,0.0
+cat__tieude_Nhà nguyên căn Đề Thám sát phố Tây,0.0
+cat__tieude_Nhà nguyên căn đường Bình Tiên,0.0
+cat__tieude_Nhà nhỏ nguyên căn Bà Hom,0.0
+cat__tieude_Nhà nhỏ nguyên căn Bà Hom gần chợ Phú Lâm,0.0
+cat__tieude_Nhà nhỏ riêng biệt Bà Hom,0.0
+cat__tieude_Nhà nhỏ xinh gần Picity High Park,0.0
+cat__tieude_Nhà phố Cát Lái 7x17,0.0
+cat__tieude_Nhà quận 4 hẻm 148,0.0
+cat__tieude_Nhà riêng Huỳnh Tấn Phát 3PN 2WC,0.0
+cat__tieude_Nhà riêng Samsung Village Bưng Ông Thoàn,0.0
+cat__tieude_PHONG TRO MINI AN TOAN THOANG MAT,0.0
+cat__tieude_PHONG TRO MOI KHAI TRUONG – GAN CAU NGUYEN VAN CU QUAN 8,0.0
+cat__tieude_PHONG TRO MOI TINH NGAY LE VAN VIET - TANG NHON PHU A - FULL NOI THAT,0.0
+cat__tieude_Pass gap Can ho mini Q3 - ky 1 nam free thang dau nua nam free nua thang,0.0
+cat__tieude_Pass lại nhà thuê nguyên căn,0.0
+cat__tieude_Phong Q1 Phong Studio Can ho Mini Phong tro Q1 day du tien nghi trung tam Q1,0.0
+cat__tieude_Nhà riêng hẻm 1041 Trần Xuân Soạn,0.0
+cat__tieude_Nhà riêng nguyên căn Long Trường,0.0
+cat__tieude_Nhà riêng đường 3/2 Hòa Hưng,0.0
+cat__tieude_Nhà sạch đẹp 2PN gần chợ Cầu Đồng,0.0
+cat__tieude_Nhà trung tâm Bình Thạnh nhỏ,0.0
+cat__tieude_Nhà trung tâm Gò Vấp giá rẻ,0.0
+cat__tieude_Nhà trọ Gia Phú,0.0
+cat__tieude_Nhà trọ thoáng mát sạch sẽ Củ Chi,0.0
+cat__tieude_Nhà trọ Ấp Tam Đông Thới Tam Thôn,0.0
+cat__tieude_Nhà trống có sân đậu ô tô,0.0
+cat__tieude_Phong gia re ban cong noi that day du,0.0
+cat__tieude_Phong tro ngay Hong Bang gia sieu hat de cho Sinh vien HCMUE SGU KHTN,0.0
+cat__tieude_Phòng 1 người Nguyễn Trọng Tuyển,0.0
+cat__tieude_Phòng 2 cửa sổ gần IUH,0.0
+cat__tieude_Phòng 20m2 đủ tiện nghi Lê Văn Sỹ,0.0
+cat__tieude_Phòng 25m2 QL50 Bình Chánh,0.0
+cat__tieude_Phòng 25m2 đầy đủ tiện nghi P4 Quận 8,0.0
+cat__tieude_Phòng 30m2 có gác gần trường đại học,0.0
+cat__tieude_Phòng 40m2 gác lửng full nội thất Âu Dương Lân,0.0
+cat__tieude_Phòng An Dương Vương,0.0
+cat__tieude_Nhà đẹp Đoàn Văn Bơ,0.0
+cat__tieude_Nhà để ở trung tâm Quận 5,0.0
+cat__tieude_PHONG BAN CONG MAT TIEN HOANG SA QUAN 1,0.0
+cat__tieude_PHONG CAO CAP – CO GAC LUNG SANG XIN – FULL NOI THAT – DUONG 21 QUANG TRUNG GO VAP,0.0
+cat__tieude_PHONG DEP – Full Noi That- Ban Cong,0.0
+cat__tieude_PHONG MOI DEP – GAC RONG – SAN TRUOC THOANG – O NGAY,0.0
+cat__tieude_Phòng Huỳnh Khương Ninh,0.0
+cat__tieude_Phòng KDC Trung Sơn nội thất đầy đủ,0.0
+cat__tieude_Phòng KDC Đào Sư Tích Phước Kiển,0.0
+cat__tieude_Phòng Lý Chính Thắng,0.0
+cat__tieude_Phòng Nam Kỳ Khởi Nghĩa,0.0
+cat__tieude_Phòng Nguyễn Cảnh Chân,0.0
+cat__tieude_Phòng Nguyễn Duy Trinh,0.0
+cat__tieude_Phòng Nguyễn Phúc Nguyên,0.0
+cat__tieude_Phòng Nguyễn Thiện Thuật,0.0
+cat__tieude_Phòng Nguyễn Trãi có gác,0.0
+cat__tieude_Phong Studio Full noi that ban cong thoang gan LOTTE MART - UFM - TDT - KDC Him Lam Quan 7 sat Q4 Q8,0.0
+cat__tieude_Phong co Ban Cong 30m2 phuong An Khanh Q2 full noi that,0.0
+cat__tieude_Phong dep Q1 - Ban cong lon full noi that may giat rieng,0.0
+cat__tieude_Phong dep gia re FULL NOI THAT ngay DUONG NGUYEN OANH,0.0
+cat__tieude_Phong full noi that - 40m2 - Duong Khanh Hoi - 6TR - Quan 4,0.0
+cat__tieude_Phong full noi that co ban cong - don vao o lien,0.0
+cat__tieude_Phòng Sleepbox Bến Vân Đồn,0.0
+cat__tieude_Phòng Sleepbox Dương Bá Trạc,0.0
+cat__tieude_Phòng Sleepbox Huỳnh Tấn Phát,0.0
+cat__tieude_Bạn nữ thuê phòng riêng trong nhà nguyên căn,0.0
+cat__tieude_Biệt thự KDC 13E,0.0
+cat__tieude_Phòng Studio đẹp khu Hoàng Sa,0.0
+cat__tieude_Phòng Trương Hán Siêu,0.0
+cat__tieude_Phòng Trần Quang Diệu,0.0
+cat__tieude_Phòng Tô Hiến Thành có ban công,0.0
+cat__standardized_location_Củ Chi,0.0
+cat__tieude_Phòng CH mini 1PN tách bếp gần ĐH Văn Hiến,0.0
+cat__tieude_Phòng CMT8 - Đỗ Thị Lời,0.0
+cat__tieude_Phòng Cách Mạng Tháng Tám,0.0
+cat__tieude_Phòng Cát Lái 1PN,0.0
+cat__tieude_Phòng Cô Giang có gác,0.0
+cat__tieude_Phòng Cống Quỳnh gác lửng,0.0
+cat__tieude_Phòng ban công gần Phan Xích Long,0.0
+cat__tieude_Phòng ban công gần Văn Lang Nguyễn Xí Bình Lợi,0.0
+cat__standardized_location_Cần Giờ,0.0
+cat__tieude_Phòng ban công mới xây gần Co.op Hòa Bình,0.0
+cat__tieude_Phòng ban công rẻ bờ kè Hoàng Sa,0.0
+cat__tieude_Phòng ban công rộng trung tâm Q5,0.0
+cat__tieude_Phòng ban công tách bếp gần CVPM Quang Trung,0.0
+cat__tieude_Phòng cao cấp Lavila Kiến Á,0.0
+cat__tieude_Phòng cao cấp gần ĐH Khoa Học Tự Nhiên,0.0
+cat__tieude_Phòng cao cấp gần ĐH Kinh Tế và Bách Khoa,0.0
+cat__phanloai_Studio,0.0
+cat__tieude_Phòng Nguyễn Trãi cửa sổ lớn,0.0
+cat__tieude_Phòng Nguyễn Tư Nghiêm,0.0
+cat__tieude_Phòng Nguyễn Văn Cừ full nội thất,0.0
+cat__tieude_Phòng Phạm Văn Chí đầy đủ tiện nghi,0.0
+cat__tieude_Phòng Quận 10 có cửa sổ WC riêng,0.0
+cat__tieude_Phòng có gác cửa sổ lớn Tân Sơn,0.0
+cat__tieude_Phòng có gác full nội thất Hà Huy Giáp,0.0
+cat__tieude_Phòng có gác full nội thất gần CV Làng Hoa,0.0
+cat__tieude_Phòng có gác gần ngã 4 Thủ Đức Đình Phong Phú,0.0
+cat__tieude_Phòng có gác gần ngã 4 Trung Chánh,0.0
+cat__tieude_Phòng có gác đầy đủ nội thất cơ bản,0.0
+cat__tieude_Phòng có máy lạnh gần cầu vượt Linh Xuân,0.0
+cat__tieude_Phòng có thang máy Nguyễn Thái Bình,0.0
+cat__tieude_Phòng căn hộ cao cấp khu Tên Lửa,0.0
+cat__tieude_Phòng cư xá Đô Thành,0.0
+cat__tieude_Phòng cửa sổ lớn gần chợ Tân Mỹ,0.0
+cat__tieude_Phòng an ninh gần tuyến Metro,0.0
+cat__tieude_Phòng ban công Lê Văn Lương thuận tiện qua UFM TDT,0.0
+cat__tieude_Phòng ban công full nội thất sát Gigamall,0.0
+cat__tieude_Phòng ban công giá rẻ gần Lý Chính Thắng,0.0
+cat__tieude_Phòng ban công giá tốt Tân Sơn Nhì,0.0
+cat__tieude_Phòng full nội thất 1PN tách bếp 613 Âu Cơ,0.0
+cat__tieude_Phòng full nội thất Lê Văn Việt Quận 9,0.0
+cat__tieude_Phòng full nội thất Xô Viết Nghệ Tĩnh,0.0
+cat__tieude_Phòng full nội thất ban công Quận 5,0.0
+cat__tieude_Phòng full nội thất có ban công đối diện bến xe Q8,0.0
+cat__tieude_Phòng full nội thất có máy giặt riêng,0.0
+cat__tieude_Phòng full nội thất gần Bách Khoa Phú Thọ,0.0
+cat__tieude_Phòng full nội thất gần Bách Khoa SVĐ Phú Thọ,0.0
+cat__tieude_Phòng full nội thất gần Hồng Bàng,0.0
+cat__tieude_Phòng full nội thất gần IUH,0.0
+cat__tieude_Phòng full nội thất gần Lotte Q7,0.0
+cat__tieude_Phòng cao cấp nội thất đầy đủ Tân Sơn Nhì,0.0
+cat__tieude_Phòng cao cấp đường Tên Lửa,0.0
+cat__tieude_Phòng cho nam sinh viên CMT8 P7,0.0
+cat__tieude_Phòng cho thuê giá rẻ Quận 11 cho gia đình,0.0
+cat__tieude_Phòng có gác ban công lớn Bùi Đình Túy,0.0
+cat__tieude_Phòng gác cửa sổ gần đại học Y Dược,0.0
+cat__tieude_Phòng gác duplex full nội thất Lý Thường Kiệt,0.0
+cat__phanloai_Shophouse,0.0
+cat__tieude_Phòng gác lửng Phạm Văn Sáng,0.0
+cat__tieude_Phòng gác lửng full nội thất gần chợ Hoàng Hoa Thám,0.0
+cat__tieude_Phòng gác lửng gần Sư Vạn Hạnh Tô Hiến Thành,0.0
+cat__tieude_Phòng gác lửng gần sân bay Tân Sơn Nhất,0.0
+cat__tieude_Phòng gác lửng mới xây Tân Sơn,0.0
+cat__tieude_Phòng gác lửng mới xây gần chợ Hoàng Hoa Thám,0.0
+cat__phanloai_Penthouse,0.0
+cat__tieude_Phòng gần Aeon Bình Tân có thang máy,0.0
+cat__tieude_Phòng cửa sổ thoáng full nội thất gần PV Gas,0.0
+cat__tieude_Phòng duplex cửa sổ lớn đường Tân Sơn Nhì,0.0
+cat__tieude_Phòng duplex full nội thất Hà Huy Giáp,0.0
+cat__tieude_Phòng duplex gần ngã tư Ga,0.0
+cat__tieude_Phòng full nội thất 187A Lê Văn Lương,0.0
+cat__tieude_Phòng gần công viên Đầm Sen,0.0
+cat__tieude_Phòng gần cầu Chữ Y,0.0
+cat__tieude_Phòng gần ngã 3 Mỹ Thành Lê Văn Việt,0.0
+cat__tieude_Phòng gần ngã 4 Thủ Đức Lê Văn Việt,0.0
+cat__tieude_Phòng gần sân vận động Hoa Lư,0.0
+cat__tieude_Phòng gần ĐH Lao Động Xã Hội Tô Ký,0.0
+cat__tieude_Phòng gần ĐH Tôn Đức Thắng,0.0
+cat__tieude_Phòng gần Đại học Công Thương,0.0
+cat__tieude_Phòng hẻm ô tô Âu Dương Lân,0.0
+cat__tieude_Phòng khai trương ưu đãi Gò Vấp,0.0
+cat__tieude_Phòng khu Intresco 13E Bình Chánh,0.0
+cat__tieude_Phòng full nội thất gần UTC2 Quận 9,0.0
+cat__tieude_Phòng full nội thất gần cầu Nguyễn Văn Cừ,0.0
+cat__tieude_Phòng full tiện nghi Trần Hưng Đạo,0.0
+cat__tieude_Phòng giá rẻ cửa sổ trời KDC Trung Sơn,0.0
+cat__tieude_Phòng giờ giấc tự do gần Etown Cộng Hòa,0.0
+cat__tieude_Phòng máy lạnh ban công gần Cao Lỗ,0.0
+cat__tieude_Phòng máy lạnh cửa sổ thoáng gần cầu vượt Linh Xuân,0.0
+cat__tieude_Phòng máy lạnh gần Lotte Mart,0.0
+cat__tieude_Phòng máy lạnh gần ngã tư Bốn Xã,0.0
+cat__tieude_Phòng máy lạnh ngay Lê Văn Sỹ,0.0
+cat__tieude_CAN HO 30M2 FULL NOI THAT LE VAN SY QUAN 3 GAN BO KE TRUONG SA,0.0
+cat__tieude_Phòng mặt tiền Trần Thị Nơi,0.0
+cat__tieude_Phòng mới 100% trung tâm Quận 6,0.0
+cat__tieude_Phòng mới 100% đối diện bến xe Chợ Lớn,0.0
+cat__tieude_Phòng mới ban công gần vòng xoay Phú Lâm,0.0
+cat__tieude_Phòng mới gác lửng gần ngã tư Bình Thái,0.0
+cat__tieude_Phòng gần Tô Ký và Nguyễn Ảnh Thủ,0.0
+cat__tieude_Phòng gần Tô Ngọc Vân Phạm Văn Đồng,0.0
+cat__tieude_Phòng gần chợ Lạc Quang Trường Chinh,0.0
+cat__tieude_Phòng gần chợ Nguyễn Văn Trỗi,0.0
+cat__tieude_Phòng gần công viên Q1,0.0
+cat__tieude_Phòng master trong căn 2 phòng ngủ Quận 9,0.0
+cat__tieude_Can Ho Studio Xa Bep Co Ban Cong - Sieu Thoang Mat Tien Nghi,0.0
+cat__tieude_Can Ho Tien Nghi 35m2 1PN tach bep Ngay Khu Ten Lua giap Quan 6,0.0
+cat__tieude_Can Ho day du noi that moi 100% khu vuc Lo Gom ngay Nguyen Van Luong ngay Hau Giang Hong Bang,0.0
+cat__tieude_Can cho thue gap can ho 1PN Conic Garden,0.0
+cat__tieude_Can ho 1 Phong ngu PK du noi that gan Cau Kieu P Tan Dinh Quan 1,0.0
+cat__tieude_Can ho 1PN 40m2 Cua so full noi that gan Cau Tan Thuan cho Xom Chieu,0.0
+cat__tieude_Can ho 60 m vuong trung tam Q5,0.0
+cat__tieude_Can ho DV Khu Tanimex - 215 To Ky - Gan DH Huflit FPT PM Quang Trung Cho Nga Ba Bau,0.0
+cat__tieude_Can ho Mini Full noi that May giat rieng tai Dam Sen Luy Ban Bich tien di Quan 11,0.0
+cat__tieude_Can ho Mini cao cap - Tran Hung Dao Quan 5 Dang trong,0.0
+cat__tieude_CON TRONG CAN MINI FULL NOI THAT Y HINH NGAY BA THANG HAI QUAN 10,0.0
+cat__tieude_CAN HO 1PN MOI XAY MAY GIAT RIENG ngay cau Thi Nghe,0.0
+cat__tieude_Can Ho Ban cong 40m2 Full Noi That Nguyen Thai Binh Quan 1 Gan cho Ben Thanh,0.0
+cat__tieude_Phòng mini trung tâm Phú Nhuận,0.0
+cat__tieude_Phòng máy lạnh Lê Văn Sỹ,0.0
+cat__tieude_Phòng mới sạch thoáng mát gần Song Hành,0.0
+cat__tieude_Phòng mới tách bếp P25 gần Hàng Xanh,0.0
+cat__tieude_Phòng mới xây gần Võ Văn Kiệt,0.0
+cat__tieude_Phòng mới xây nội thất đầy đủ,0.0
+cat__tieude_Phòng mới xây đường Nguyễn Bình,0.0
+cat__tieude_Phòng nội thất 2 ban công gần Hàng Xanh,0.0
+cat__tieude_Phòng nội thất đầy đủ đường Lã Xuân Oai,0.0
+cat__tieude_Phòng riêng máy lạnh gần ĐH Sư Phạm,0.0
+cat__tieude_Phòng riêng trong chung cư Hoàng Anh Gold,0.0
+cat__tieude_Cho thue can ho moi sat Quan 1 ngay cau Nguyen Van Cu - Full noi that - BanCong,0.0
+cat__tieude_Phòng rộng rãi gần ngã 4 Thủ Đức,0.0
+cat__tieude_Phòng sinh viên gần ĐH Luật và ĐH Nguyễn Tất Thành,0.0
+cat__tieude_Phòng studio CHDV Nguyễn Trãi,0.0
+cat__tieude_Phòng studio mới 100% gần CV Gia Định,0.0
+cat__tieude_Phòng khu Phan Xích Long,0.0
+cat__tieude_Phòng khu biệt thự Lavila,0.0
+cat__tieude_Phòng thoáng mát gần công viên Lê Thị Riêng,0.0
+cat__tieude_Phòng tiện nghi Dương Văn Dương gần Aeon,0.0
+cat__tieude_Phòng toilet riêng có gác máy lạnh Lê Văn Lương,0.0
+cat__tieude_Phòng trong căn hộ chung cư Đức Khải,0.0
+cat__tieude_Phòng trong nhà phố KDC Nam Long,0.0
+cat__tieude_Phòng trung tâm gác cao,0.0
+cat__tieude_Phòng trệt Nguyễn Thị Mười,0.0
+cat__tieude_Phòng trọ 15m2 thích hợp 1-2 người,0.0
+cat__tieude_Phòng trọ An Phú Đông gần trường Nguyễn Tất Thành,0.0
+cat__tieude_Phòng trọ Bà Điểm 2tr3,0.0
+cat__tieude_1 CAN HO MINI FULL NOI THAT TAI TRUNG TAM QUAN 9 - LE VAN VIET - LA XUAN OAI - KHU CONG NGHE CAO - NGA,0.0
+cat__tieude_Phòng trọ Bùi Văn Ba gần KCX,0.0
+cat__tieude_Phòng trọ Hiệp Bình Phước gần Vạn Phúc,0.0
+cat__tieude_Phòng trọ Hóc Môn giá từ 1tr7 đến 2tr6,0.0
+cat__tieude_1 PHONG NGU TACH BEP - BAN CONG - RONG 40M2 CHI 7TRX TRONG KHU DO THI AN KHANH AN PHU,0.0
+cat__tieude_Phòng trọ KDC Bình Điền,0.0
+cat__tieude_Phòng trọ Lò Gốm,0.0
+cat__tieude_Phòng trọ Nguyễn Thị Tú ngã tư Gò Mây,0.0
+cat__tieude_Phòng trọ Phan Xích Long,0.0
+cat__tieude_Phòng trọ Phạm Hùng giáp Quận 8,0.0
+cat__tieude_Phòng trọ Trần Thị Bầu Tân An Hội,0.0
+cat__tieude_CAN HO BAN CONG DEP - NGAY LE VAN SY QUAN 3 - FULL TIEN ICH GIA 7TR5,0.0
+cat__tieude_Phòng trọ an ninh sạch sẽ có gác,0.0
+cat__tieude_CAN HO BAN CONG THOANG - FULL NOI THAT CAO CAP NGAY TT GO VAP,0.0
+cat__tieude_Phòng trọ cao cấp giá bình dân Nguyễn Xiển,0.0
+cat__tieude_Phòng trọ cao cấp mới 100% Củ Chi,0.0
+cat__tieude_Phòng trọ cao cấp thang máy Vườn Lài,0.0
+cat__tieude_Phòng trọ cho sinh viên UEH hoặc Văn Hiến,0.0
+cat__tieude_Phòng trọ cho sinh viên nữ hoặc cặp vợ chồng,0.0
+cat__tieude_Phòng trọ chợ hoa Hồ Thị Kỷ,0.0
+cat__tieude_Phòng trọ có gác gần Lê Văn Quới,0.0
+cat__tieude_Phòng trọ có gác lửng đủ tiện nghi,0.0
+cat__tieude_Phòng trọ có gác ngay ngã 4 Trung Chánh,0.0
+cat__tieude_Phòng trọ có máy lạnh đường Bà Hạt,0.0
+cat__tieude_Phòng trọ công nhân sinh viên,0.0
+cat__tieude_Phòng trọ cư xá Lữ Gia,0.0
+cat__tieude_Phòng trọ full nội thất cách Q1 5 phút,0.0
+cat__tieude_Phòng trọ full nội thất trung tâm Quận 4,0.0
+cat__tieude_Phòng trọ giá rẻ Bình Phú,0.0
+cat__tieude_Phòng trọ giá rẻ gần Cao Lỗ,0.0
+cat__tieude_Phòng trọ giá rẻ đang cải tạo sạch sẽ,0.0
+cat__tieude_Phòng trọ giá từ 2.5 triệu Quận 7,0.0
+cat__tieude_Phòng trọ gác cao Lê Trọng Tấn,0.0
+cat__tieude_Phòng trọ gần Aeon Bình Tân,0.0
+cat__tieude_Phòng trọ gần Khu Công Nghệ Cao,0.0
+cat__tieude_Phòng trọ gần chợ Thủ Đức,0.0
+cat__tieude_Phòng trọ gần khu công nghiệp Tây Bắc,0.0
+cat__tieude_Phòng trọ gần ngã 4 Bốn Xã,0.0
+cat__tieude_Phòng trọ gần ngã 4 Tân Quy,0.0
+cat__tieude_Phòng trọ gần trường Bình Khánh,0.0
+cat__tieude_Phòng trọ khu Bàu Cát,0.0
+cat__tieude_Phòng trọ khu Phú Nhuận,0.0
+cat__tieude_Phòng trọ lớn trung tâm Quận 5,0.0
+cat__tieude_Phòng trọ máy lạnh Vĩnh Lộc A,0.0
+cat__tieude_Phòng trọ mặt bằng đẹp Nguyễn Thị Đặng,0.0
+cat__tieude_Phòng trọ mặt tiền Khánh Hội,0.0
+cat__tieude_Phòng trọ mặt tiền khu phố ẩm thực Q6,0.0
+cat__tieude_Phòng trọ mới full nội thất ban công rộng,0.0
+cat__tieude_Phòng trọ mới sạch sẽ giờ giấc tự do,0.0
+cat__tieude_Phòng trọ mới trung tâm Q4,0.0
+cat__tieude_Phòng trọ mới xây Thới Tam Thôn,0.0
+cat__tieude_Phòng trọ mới xây gần trung tâm Hóc Môn,0.0
+cat__tieude_Phòng trọ mới xây gần ĐH Kinh Tế,0.0
+cat__tieude_Phòng trọ mới xây mặt tiền Lê Trọng Tấn,0.0
+cat__tieude_Phòng trọ ngã tư Lạc Long Quân Âu Cơ,0.0
+cat__tieude_Phòng trọ nữ sinh viên Lý Thái Tổ,0.0
+cat__tieude_Phòng trọ phường 7 Phú Nhuận,0.0
+cat__tieude_Phòng trọ rộng view đẹp trung tâm Q4,0.0
+cat__tieude_Phòng trọ sau bến xe An Sương,0.0
+cat__tieude_Phòng trọ sinh viên Nguyễn Văn Cừ,0.0
+cat__tieude_Phòng trọ sinh viên Nguyễn Văn Cừ full nội thất,0.0
+cat__tieude_Phòng trọ sinh viên Đào Sư Tích,0.0
+cat__tieude_Phòng trọ sạch sẽ thoáng sát Quận 7,0.0
+cat__tieude_Phòng trọ sạch sẽ yên tĩnh Nhà Bè,0.0
+cat__tieude_CAN HO BANCONG HIEN DAI FULL NOI THAT O BINH THANH,0.0
+cat__tieude_Phòng trọ trung tâm Bình Thạnh,0.0
+cat__tieude_Phòng trọ tại thị trấn Củ Chi,0.0
+cat__tieude_Phòng trọ yên tĩnh Q1,0.0
+cat__tieude_Phòng trọ Âu Dương Lân giá trọn gói,0.0
+cat__tieude_Phòng trọ Đoàn Văn Bơ,0.0
+cat__tieude_Phòng ở ghép ký túc xá sinh viên gần CVPM Quang Trung,0.0
+cat__tieude_Q4 - P4 - CAN HO DICH VU - FULL NOI THAT - Ban Cong,0.0
+cat__tieude_SAN PHONG DAY DU TIEN NGHI NGAY HUONG LO 2 - MA LO - TEN LUA - KHU VUC AN NINH - YEN TINH,0.0
+cat__tieude_Phòng trọ Đặng Thùy Trâm,0.0
+cat__tieude_Phòng trọ đường 131 Ấp 5 Tân Thạnh Đông,0.0
+cat__tieude_Phòng trọ đường 23 HBC gần Gigamall,0.0
+cat__tieude_Phòng trọ đường 3/2 Phường 12,0.0
+cat__tieude_Phòng trọ đường số 12 Bình Hưng Hòa,0.0
+cat__tieude_Phòng trọ đầu hẻm Tôn Thất Thuyết,0.0
+cat__tieude_Phòng trọ đầy đủ nội thất Hồ Văn Huê,0.0
+cat__tieude_Phòng trọ ưu đãi An Dương Vương,0.0
+cat__tieude_Phòng trọ Ấp Tam Đông Thới Tam Thôn 900k,0.0
+cat__tieude_Phòng trọ ở ghép ký túc xá tư nhân,0.0
+cat__tieude_Phòng tách bếp full nội thất có sân thượng,0.0
+cat__tieude_Phòng xịn gần ĐH SPKT và ĐH Ngân Hàng,0.0
+cat__tieude_Phòng Đinh Công Tráng,0.0
+cat__tieude_STUDIO moi 100% ngay chan cau Nguyen Van Cu gan vong xoay Trung Son,0.0
+cat__tieude_SU KET HOP HOAN HAO GIUA NHA NGUYEN CAN VA CAN HO - 1 TRET 1 LAU - BAN CONG RIENG,0.0
+cat__tieude_SUITE 1 PHONG NGU FULL NOI THAT TIEN NGHI CO BAN CONG THOANG MAT,0.0
+cat__tieude_Phòng Điện Biên Phủ,0.0
+cat__tieude_Phòng đường Nguyễn Hữu Cầu,0.0
+cat__tieude_Phòng đường TX38 Thạnh Xuân,0.0
+cat__tieude_Phòng đường số 9 Long Thạnh Mỹ,0.0
+cat__tieude_Phòng đầy đủ nội thất Khu Trung Sơn,0.0
+cat__tieude_Phòng đầy đủ nội thất ban công ngay Tô Ký,0.0
+cat__tieude_CAN HO BanCong 30m2 HONG BANG CAU VUOT CAY GO QUAN 6,0.0
+cat__tieude_Phòng đẹp 196 Cộng Hòa gần CV Hoàng Văn Thụ,0.0
+cat__tieude_Phòng đẹp Xô Viết Nghệ Tĩnh P25,0.0
+cat__tieude_Phòng đẹp có ban công Hậu Giang,0.0
+cat__tieude_Phòng đẹp full nội thất 187A Lê Văn Lương,0.0
+cat__tieude_Phòng đẹp mới xây Huỳnh Văn Bánh,0.0
+cat__tieude_Phòng đẹp đường Văn Thân,0.0
+cat__tieude_Studio 30m2 Full noi that cua so troi cho Tan Dinh cau Cong Ly Ho Con Rua cong vien Le Van Tam,0.0
+cat__tieude_Studio 42m2 Tôn Đản Quận 4,0.0
+cat__tieude_Studio An Khánh,0.0
+cat__tieude_SIEU CAN HO DAY DU TIEN NGHI NGAY TRUNG TAM KHU TEN LUA Aeon Binh Tan,0.0
+cat__tieude_STUDIO 1PN – TACH BEP FULL NEW 100% – TRUNG TAM PHU NHUAN,0.0
+cat__tieude_STUDIO BAN CONG – FULL NEW – MAY GIAT RIENG 486 Phan Xich Long – Phu Nhuan,0.0
+cat__tieude_STUDIO BANCONG DAY DU NOI THAT DIEN TICH RONG NGAY QUANG TRUNG,0.0
+cat__tieude_STUDIO BANCONG DUONG HOANG SA THANG MAY GAN BO KE - CAU THI NGHE - DAI TRUYEN HINH VTV - DAKAO QUAN 1,0.0
+cat__tieude_STUDIO BANCONG NGAY NGUYEN DUY TRINH - BINH TRUNG TAY - RONG 40M2 - GAN MAI CHI THO,0.0
+cat__tieude_STUDIO CUA SO TROI MOI KHAI TRUONG NGAY NGUYEN VAN GIAP Q2,0.0
+cat__tieude_STUDIO CUA SO TROI THOANG MAT NGAY LUY BAN BICH VUON LAI GIA CHI TU 3TR8,0.0
+cat__tieude_STUDIO DEP – FULL NOI THAT – DUONG QUANG HAM P5 GO VAP,0.0
+cat__tieude_STUDIO FULL NOI THAT - KHU VUC AN NINH TOA NHA DEP NGAY GAN VONG XOAY LE DAI HANH,0.0
+cat__tieude_STUDIO FULL NOI THAT – BAN CONG THOANG SANG – BACH DANG GAN SAN BAY - TRUNG TAM TAN BINH,0.0
+cat__tieude_STUDIO MOI XAY – FULL NOI THAT – BAN CONG SIEU CHILL NGAY DANG THUY TRAM,0.0
+cat__tieude_STUDIO co BANCONG full noi that Nguyen Cong Hoan Phu Nhuan,0.0
+cat__tieude_Studio ban công rộng gần Đảo Kim Cương,0.0
+cat__tieude_Studio cao cấp Nguyễn Trãi Quận 5,0.0
+cat__tieude_Studio cua so lon full noi that Quan 4 gan DH Luat NTT thuan tien di chuyen qua Quan 1 5 7 8,0.0
+cat__tieude_Share phòng mới full nội thất có ban công,0.0
+cat__tieude_Shophouse tầng trệt Cát Lái,0.0
+cat__tieude_CAN HO CAO CAP 1PN BAN CONG NGAY LY CHIEU HOANG FULL NOI THAT - GAN MEGA BINH PHU,0.0
+cat__tieude_Siêu phẩm tách bếp ban công gần Đảo Kim Cương,0.0
+cat__tieude_Sleepbox 229 Tây Thạnh,0.0
+cat__tieude_Sleepbox KTX cao cấp gần Âu Cơ,0.0
+cat__tieude_Sleepbox KTX tiện nghi 488 Lê Trọng Tấn,0.0
+cat__tieude_Sleepbox Lê Văn Sỹ,0.0
+cat__tieude_Sleepbox Lê Văn Việt gần khu CNC,0.0
+cat__tieude_Sleepbox Nguyễn Văn Trỗi,0.0
+cat__tieude_Sleepbox Sư Vạn Hạnh,0.0
+cat__tieude_Sleepbox gần ĐH Ngân Hàng,0.0
+cat__tieude_Sleepbox máy lạnh Lê Văn Việt gần khu CNC,0.0
+cat__tieude_Studio giá rẻ Mai Xuân Thưởng gần Văn Lang,0.0
+cat__tieude_Studio mới xây cửa sổ lớn,0.0
+cat__tieude_Studio thang máy Nguyễn Thị Minh Khai gần Thảo Cầm Viên,0.0
+cat__tieude_Studio va duplex full noi that ngay Ly Chieu Hoang,0.0
+cat__tieude_Studio CMT8 Quận 10,0.0
+cat__tieude_Studio Cát Lái,0.0
+cat__tieude_Studio Cát Lái mới toanh,0.0
+cat__tieude_Studio Full noi that 1PN - Duong so 79 Tan Quy - Cach Lotte 500m - Thuan tien di chuyen qua q4,0.0
+cat__tieude_Studio Nguyễn Huy Tự Quận 1,0.0
+cat__tieude_Studio Tach Bep Tran Hung Dao Quan 5,0.0
+cat__tieude_Studio Tôn Thất Thuyết Q4,0.0
+cat__tieude_Studio ban cong - Nguyen Cong Hoan - Phu Nhuan - Gan truc duong Phan Xich Long Van Kiep Quan 1,0.0
+cat__tieude_Studio ban cong full NT nha biet thu ngay Pham Hung Q8,0.0
+cat__tieude_Studio ban công Q4 gần ĐH Luật,0.0
+cat__tieude_Studio ban công Tôn Đản Q4,0.0
+cat__tieude_Studio ban công gần Đảo Kim Cương,0.0
+cat__tieude_Trọ Sleepbox Lê Đại Hành,0.0
+cat__tieude_Trọ ở ghép giường tầng gần ngã tư Thủ Đức,0.0
+cat__tieude_Tòa nhà mới xây có gác Văn Thân Quận 6,0.0
+cat__tieude_Ở ghép giường tầng Bình Hưng Bình Chánh,0.0
+cat__tieude_Ở ghép sleepbox riêng tư Đỗ Xuân Hợp,0.0
+cat__tieude_Studio cua so lon – thoang mat ca ngay tai Tan Binh,0.0
+cat__tieude_Studio cửa sổ lớn gần Đảo Kim Cương,0.0
+cat__tieude_Studio cửa sổ thoáng Quận 10,0.0
+cat__standardized_location_Gò Vấp,0.0
+cat__tieude_Studio cửa sổ tách bếp An Khánh,0.0
+cat__tieude_Studio diện tích rộng An Khánh Quận 2,0.0
+cat__tieude_Studio duong Nguyen Khoai gan cau Khanh Hoi DH Luat DH NTT,0.0
+cat__tieude_Studio full nội thất 525 Tô Hiến Thành,0.0
+cat__tieude_Studio full nội thất cao cấp Tân Phú,0.0
+cat__tieude_Studio full nội thất gần CV Làng Hoa,0.0
+cat__tieude_Studio full tiện nghi gần KCX Tân Thuận,0.0
+cat__dientich_119 m,0.0
+cat__dientich_12 m,0.0
+cat__dientich_124 m,0.0
+cat__dientich_125 m,0.0
+cat__dientich_128 m,0.0
+cat__dientich_13 m,0.0
+cat__standardized_location_Hóc Môn,0.0
+cat__tieude_TRONG SAN CAN HO 2PN SIEU XINH TAI NGUYEN THI DINH QUAN 2,0.0
+cat__tieude_TRONG SAN CHUNG CU MINI BAN CONG - MAY GIAT RIENG - NGAY DAI HOC VAN HIEN TAN PHU,0.0
+cat__tieude_TRONG SAN STUDIO FULL NOI THAT CO BALCON RONG RAI THOANG MAT NGAY MAT TIEN LY THUONG KIET,0.0
+cat__tieude_Thảo Điền CHDV cửa sổ lớn,0.0
+cat__tieude_Trong san 1P Studio Full noi that day du tien nghi gan tuyen La Xuan Oai,0.0
+cat__tieude_Trong san CHDV Day du tien nghi Co Gac cao Cua so troi - Ban cong Thoang mat Ngay tai Hoa Binh,0.0
+cat__tieude_Trong san can ho Studio cua so lon thoang mat Dia chi Ton That Thuyet - Quan 4,0.0
+cat__tieude_Trong san co the don vao ngay can ho ban cong full noi that ngay Quan 6 tren duong Vo Van Kiet,0.0
+cat__tieude_Trọ 1 người full nội thất sleepbox Q4,0.0
+cat__dientich_156 m,0.0
+cat__dientich_16 m,0.0
+cat__dientich_162 m,0.0
+cat__dientich_17 m,0.0
+cat__dientich_18 m,0.0
+cat__dientich_180 m,0.0
+cat__dientich_19 m,0.0
+cat__dientich_195 m,0.0
+cat__dientich_10 m,0.0
+cat__dientich_101 m,0.0
+cat__dientich_104 m,0.0
+cat__dientich_107 m,0.0
+cat__dientich_109 m,0.0
+cat__dientich_11 m,0.0
+cat__dientich_110 m,0.0
+cat__dientich_112 m,0.0
+cat__standardized_location_Nhà Bè,0.0
+cat__dientich_250 m,0.0
+cat__dientich_26 m,0.0
+cat__dientich_265 m,0.0
+cat__dientich_27 m,0.0
+cat__dientich_28 m,0.0
+cat__dientich_29 m,0.0
+cat__dientich_29.9 m,0.0
+cat__standardized_location_Quận 11,0.0
+cat__dientich_130 m,0.0
+cat__dientich_132 m,0.0
+cat__dientich_135 m,0.0
+cat__dientich_135.8 m,0.0
+cat__dientich_14 m,0.0
+cat__dientich_140 m,0.0
+cat__dientich_147 m,0.0
+cat__dientich_35.6 m,0.0
+cat__standardized_location_Quận 4,0.0
+cat__dientich_36.4 m,0.0
+cat__dientich_38 m,0.0
+cat__dientich_39 m,0.0
+cat__dientich_40 m,0.0
+cat__dientich_40.4 m,0.0
+cat__dientich_41.4 m,0.0
+cat__dientich_42 m,0.0
+cat__dientich_43 m,0.0
+cat__dientich_46 m,0.0
+cat__dientich_198 m,0.0
+cat__tieude_Phòng đầy đủ nội thất gần Lê Văn Việt khu CNC,0.0
+cat__dientich_21 m,0.0
+cat__dientich_22 m,0.0
+cat__dientich_230 m,0.0
+cat__tieude_Can Ho Cao Cap gan NTD PHU THO co DAY DU NOI THAT va BANCONG Binh Thoi Quan 11,0.0
+cat__tieude_Can Ho Cua So Lon - Full Noi That Moi - Gan Bitexco - Cau Khanh Hoi - Pho Di bo Nguyen Hue,0.0
+cat__tieude_Can Ho Dich Vu Cao Cap Thoang Mat Noi That Hien Dai Moi Xay Thuan Tien Di Chuyen Cac Khu Vuc,0.0
+cat__tieude_Can Ho Gan Cau Thu Thiem May Giat Rieng Studio 30m2 Cua so troi Gan Landmark 81 Bason Hang Xanh,0.0
+cat__tieude_Can Ho Gia Re Full NT - May Giat Rieng Ngay Nga Tu An Suong - CVPM - Cau Tham Luong,0.0
+cat__tieude_Can Ho Gia Re Full Noi That Cua So Bu Thoang Ngay Nga Tu Go May,0.0
+cat__tieude_Can Ho Mini - 1 PHONG NGU voi DAY DU TIEN NGHI o duong TRUONG CHINH,0.0
+cat__tieude_Can Ho Mini - Studio - Gac Cao - Full Noi That - Ngay To Ky - Cong Vien Phan Mem Quang Trung,0.0
+cat__tieude_CAN HO FULL NOI THAT NGAY TO HIEN THANH QUAN 10 - CAM KET Y HINH,0.0
+cat__tieude_Can Ho Mini Gia Re Dang 1PN Tach Bep Ban Cong Rieng Gan Dai Hoc Van Hien,0.0
+cat__tieude_Can Ho Mini Gia Re Khu Ten Lua Aeon Mall Binh Tan Giap Q6,0.0
+cat__property_type_clean_Phòng trọ,0.0
+cat__property_type_clean_Shophouse,0.0
+cat__property_type_clean_Studio,0.0
+cat__dientich_33 m,0.0
+cat__dientich_34 m,0.0
+cat__dientich_46.9 m,0.0
+cat__dientich_47 m,0.0
+cat__tieude_Chung cư 8X Plus Trường Chinh Q12,0.0
+cat__dientich_49 m,0.0
+cat__dientich_51.6 m,0.0
+cat__dientich_53 m,0.0
+cat__dientich_54 m,0.0
+cat__dientich_55 m,0.0
+cat__dientich_59 m,0.0
+cat__dientich_62 m,0.0
+cat__dientich_63 m,0.0
+cat__dientich_65.8 m,0.0
+cat__dientich_300 m,0.0
+cat__dientich_31 m,0.0
+cat__dientich_32 m,0.0
+cat__tieude_Can Ho Cao Cap Day Du Tien Nghi Ban Cong May Giat Rieng Ngay To Ky CVPM Quan 12,0.0
+cat__tieude_CAN HO STUDIO NGAY CONG VIEN LANG HOA LE VAN THO P11 GO VAP,0.0
+cat__dientich_66 m,0.0
+cat__dientich_67 m,0.0
+cat__dientich_68 m,0.0
+cat__dientich_69 m,0.0
+cat__dientich_70 m,0.0
+cat__dientich_71 m,0.0
+cat__dientich_73 m,0.0
+cat__dientich_74 m,0.0
+cat__dientich_75 m,0.0
+cat__dientich_76 m,0.0
+cat__dientich_77 m,0.0
+cat__tieude_Chung cư An Dương Vương P8 Q5,0.0
+cat__dientich_79 m,0.0
+cat__dientich_8 m,0.0
+cat__tieude_Chung cư An Dương Vương Q5,0.0
+cat__vitri_Quan 11,0.0
+cat__dientich_84 m,0.0
+cat__dientich_9 m,0.0
+cat__tieude_CAN HO MINI FULL NOI THAT CMT8 – QUAN 10,0.0
+cat__tieude_CAN HO MINI FULL NT DON ANH SANG TU NHIEN GAN PHU MY HUNG QUAN 7,0.0
+cat__tieude_CAN HO MINI NGAY BIG C TRUONG CHINH - LE TRONG TAN,0.0
+cat__tieude_CAN HO MINI PHU NHUAN – FULL NOI THAT – CHI 6TR – DON VAO O NGAY,0.0
+cat__tieude_CAN HO MINI SAT BEN AEON TAN PHU,0.0
+cat__tieude_CAN HO MINI SIEU DEP - NGAY TRUONG SA QUAN 3 - CUA SO THOANG RONG,0.0
+cat__tieude_CAN HO MINI STUDIO – FULL NOI THAT – GAN KHU VUC TRUNG TAM Q10 Q1 Q3,0.0
+cat__tieude_CAN HO MOI XAY 1PN NGUYEN VAN TROI FULL NOI THAT BAN CONG GAN NGA TU PHU NHUAN,0.0
+cat__tieude_CAN HO MOI XAY 30m2 FULL NOI THAT TAI TRUONG DINH NGAY CONG VIEN TAO DAN,0.0
+cat__tieude_CAN HO MOI XAY THOANG MAT GAN NHA THO BA CHUONG,0.0
+cat__tieude_CAN HO NEW 100% FULL NOI THAT - SIEU DEP TAI QUAN 3 - T4,0.0
+cat__tieude_CAN HO RONG DEP BAN CONG THOANG MAT 30M2 – NGAY TRAN MINH QUYEN QUAN 10 – GIA CHI 5TR5,0.0
+cat__tieude_CAN HO STUDIO - CMT8 QUAN 10 - GAN TRUNG TAM FULL NOI THAT,0.0
+cat__vitri_Quận 1,0.0
+cat__tieude_CAN HO CAO CAP 30M2 – BAN CONG RIENG + TACH BEP – NGAY LE VAN SY TAN BINH – GIA CHI 7tr,0.0
+cat__tieude_CAN HO DECOR HIEN DAI_XINH XAN NGAY D1-HANG XANH,0.0
+cat__tieude_CAN HO DUPLEX TAI TRUNG TAM VIP TIEN ICH - NGUYEN DINH CHIEU QUAN 3,0.0
+cat__tieude_CAN HO DUPLEX THIET KE HIEN DAI FULL NOI THAT NGAY LE DUC THO_GO VAP,0.0
+cat__tieude_CAN HO FULL NOI THAT BAN CONG THOANG NGAY TRUNG TAM QUAN 1 GAN CHO BEN THANH,0.0
+cat__tieude_CAN HO FULL NOI THAT CAO CAP - NGAY LE VAN SY QUAN 3 - KHONG GIAN SANG TRONG - GIA 6TR5,0.0
+cat__tieude_CAN HO STUDIO RONG FULL NOI THAT GAN LANDMARK NGA TU HANG XANH,0.0
+cat__tieude_CAN HO TACH BEP NEW TAI TRUNG TAM QUAN 3 LY CHINH THANG T3,0.0
+cat__dientich_90 m,0.0
+cat__dientich_94 m,0.0
+cat__dientich_97 m,0.0
+cat__vitri_Cần Giờ,0.0
+cat__vitri_Go Vap,0.0
+cat__vitri_Nhà Bè,0.0
+cat__vitri_Phu Nhuan,0.0
+cat__tieude_CAN HO MINI 1 PN TACH BEP BAN CONG RIENG FULL NOI THAT MOI XAY NGAY KHUONG VIET,0.0
+cat__tieude_Cho thue can ho mini NEW 100% BANCONG/ CUA SO THOANG gia chi tu 5tr ngay Luy Ban Bich tai Tan Phu,0.0
+cat__tieude_CAN HO MINI CAO CAP GIAM SAU DAU NAM MOI,0.0
+cat__tieude_CAN HO MINI CO BAN CONG 35m2 NOI THAT DAY DU THOANG MAT RONG RAI,0.0
+cat__vitri_Quận 4,0.0
+cat__vitri_Quận 6,0.0
+cat__vitri_Tan Binh,0.0
+cat__vitri_Thủ Đức,0.0
+cat__vitri_Tân Phú,0.0
+cat__phanloai_CanHo1PN,0.0
+cat__tieude_Cho thue can ho mini balcony gia re ngay cho Ben Thanh - Bui Vien,0.0
+cat__vitri_Quan 2,0.0
+cat__vitri_Quan 3,0.0
+cat__vitri_Quan 4,0.0
+cat__vitri_Quan 5,0.0
+cat__tieude_Cho thue can ho mini dai han - ngan han thue ngay Quan 11,0.0
+cat__tieude_CAN HO FULL NOI THAT NGAY AU CO - KHUONG VIET SAT BEN QUAN 11,0.0
+cat__tieude_Cho thue can ho moi xay gan CV Dam Sen Nuoc - Co may giat rieng,0.0
+cat__tieude_Cho thue Can ho ngay duong 3/2 day du Noi That moi co 2 Ban Cong mat tien rieng,0.0
+cat__tieude_Cho thue Studio Homestay moi xay 29/12F Doan Thi Diem sat Quan 1,0.0
+cat__tieude_Cho thue Studio ban cong full noi that Ton That Thuyet Q4,0.0
+cat__tieude_1PN Tach bep sieu rong thoang mat gan Cho Lac Quang cau Tham Luong nga tu An Suong,0.0
+cat__tieude_1PN thang máy Hai Bà Trưng gần chợ Tân Định,0.0
+cat__tieude_1PN xin xo – o la ghien ngay Tan Binh giap cv Hoang Van Thu cho Pham Van Hai,0.0
+cat__standardized_location_Tân Bình,0.0
+cat__property_type_clean_Căn hộ 1PN,0.0
+cat__property_type_clean_Căn hộ 2PN,0.0
+cat__property_type_clean_Căn hộ chung cư,0.0
+cat__property_type_clean_Căn hộ mini,0.0
+cat__property_type_clean_Duplex,0.0
+cat__property_type_clean_Nhà nguyên căn,0.0
+cat__standardized_location_Quận 9,0.0
+cat__property_type_clean_Penthouse,0.0
+cat__tieude_CAN HO MINI - 25m2 - CMT8 Q10 - GAN TRUNG TAM,0.0
+cat__area_group_Lớn (>50m²),0.0
+cat__area_group_Nhỏ (<25m²),0.0
+cat__tieude_CHO THUE CAN HO STUDIO FULL NOI THAT tai PHU NHUAN,0.0
+cat__tieude_CHO THUE CAN STUDIO - FULL NOI THAT - KHU VUC TAN BINH,0.0
+cat__tieude_CHO THUE CAN STUDIO FULL NOI THAT BACH DANG – GAN SAN BAY – GIO GIAC TU DO,0.0
+cat__tieude_CHO THUE CAN STUDIO – BAN CONG THOANG – YEN THE TAN BINH,0.0
+cat__tieude_CHO THUE CHDV - KHU TRUNG SON - GIAP QUAN 7,0.0
+cat__tieude_CHO THUE CHDV 1PN FULL NT BANCONG NGAY TRUNG TAM Q7 GAN DH TDT RMIT SUNRISE CITY CAU KENH TE,0.0
+cat__tieude_CHO THUE CHMN CUA SO LON – KHU SAN BAY TAN BINH,0.0
+cat__tieude_CHO THUE SHOPHOUSE EHOME 3 – VI TRI DAC DIA KINH DOANH SAM UAT,0.0
+cat__tieude_CHO THUE STUDIO DU NOI THAT VA TIEN NGHI - GIA SALE MUA TET,0.0
+cat__tieude_CON 1 CHMN BAN CONG TAN BINH - AEON TAN PHU - GAN SAN BAY,0.0
+cat__phanloai_CanHo2PN,0.0
+cat__tieude_CAN HO 1PN 45m2 CHO THUE chi 5.4tr/thang - Q2,0.0
