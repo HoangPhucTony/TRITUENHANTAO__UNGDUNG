@@ -1,1 +1,1 @@
-# TR-TU-NH-N-T-O-NG-D-NG-
+# MÔN HOC TRÍ TUỆ NHÂN TẠO & ỨNG DỤNG 
