@@ -123,20 +123,39 @@ export function PredictionPanel() {
             </motion.div>
           )}
           {!loading && result && (
-            <motion.div key="result" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-5">
-              <div className="rounded-2xl bg-gradient-to-br from-primary/20 to-accent/10 border border-primary/30 p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground">Mức giá hợp lý</div>
-                  <Badge className="bg-success/20 text-success border-success/30">
-                    <ShieldCheck className="size-3 mr-1" />Confidence {result.confidence}%
-                  </Badge>
+            <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-5">
+              <div className="rounded-2xl bg-gradient-to-br from-primary/25 via-accent/15 to-primary/5 border border-primary/30 p-6 relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <Sparkles className="size-24" />
                 </div>
-                <div className="text-5xl font-bold text-gradient">
+                <div className="flex items-center justify-between mb-2 relative z-10">
+                  <div className="text-xs uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
+                    <TrendingUp className="size-3" />
+                    Mức giá AI khuyến nghị
+                  </div>
+                  <div className="flex gap-2">
+                    {result.confidence > 90 && (
+                      <Badge className="bg-amber-500/20 text-amber-500 border-amber-500/30 text-[10px]">
+                        ⭐ Premium
+                      </Badge>
+                    )}
+                    <Badge className="bg-success/20 text-success border-success/30 text-[10px]">
+                      <ShieldCheck className="size-3 mr-1" />Tin cậy {result.confidence}%
+                    </Badge>
+                  </div>
+                </div>
+                <motion.div 
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2, type: "spring" }}
+                  className="text-5xl font-bold text-gradient relative z-10"
+                >
                   {(result.price / 1_000_000).toFixed(1)} triệu
-                </div>
-                <div className="text-sm text-muted-foreground mt-1">/ tháng · {area}m² · {district}</div>
-                <div className="text-[11px] text-muted-foreground mt-3 pt-3 border-t border-border">
-                  Mô hình: <span className="text-foreground font-medium">{result.model.name}</span> · MAE {result.model.MAE}tr · MAPE {result.model.MAPE}%
+                </motion.div>
+                <div className="text-sm text-muted-foreground mt-1 relative z-10">/ tháng · {area}m² · {district}</div>
+                <div className="text-[11px] text-muted-foreground mt-3 pt-3 border-t border-border flex justify-between items-center relative z-10">
+                  <span>Mô hình: <span className="text-foreground font-medium">{result.model.name}</span></span>
+                  <span className="font-mono opacity-80">MAE {result.model.MAE}tr</span>
                 </div>
               </div>
 

@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import {
   BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Legend, Cell, RadarChart, PolarGrid, PolarAngleAxis, Radar,
 } from "recharts";
-import { Brain, Sparkles, AlertTriangle, CheckCircle2, Cpu, Layers } from "lucide-react";
+import { Brain, Sparkles, AlertTriangle, CheckCircle2, Cpu, Layers, TrendingUp } from "lucide-react";
 import { MODELS, type ModelKey } from "@/features/data/mockData";
 
 const tooltipStyle = {
@@ -101,18 +101,56 @@ export function ModelStory() {
               { icon: AlertTriangle, color: "warning", title: "Vấn đề thị trường", desc: "EDA cho thấy giá phòng dao động lớn theo quận (3.5tr-7.5tr) và tiện ích. Người thuê khó biết mức giá hợp lý." },
               { icon: Brain, color: "primary", title: "Cơ hội AI", desc: "Pattern rõ ràng giữa các features (vị trí, diện tích, tiện ích) và giá → bài toán supervised regression cổ điển." },
               { icon: CheckCircle2, color: "success", title: "Mục tiêu", desc: "Xây mô hình dự đoán giá với MAPE < 10%, có thể giải thích được, hỗ trợ phát hiện tin lừa đảo." },
-            ].map(c => {
+            ].map((c, i) => {
               const Icon = c.icon;
               return (
-                <div key={c.title} className="rounded-xl border border-border bg-foreground/5 p-4">
+                <motion.div 
+                  key={c.title} 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="rounded-xl border border-border bg-foreground/5 p-4"
+                >
                   <Icon className={`size-5 mb-2 text-${c.color}`} />
                   <div className="font-semibold mb-1">{c.title}</div>
                   <div className="text-sm text-muted-foreground leading-relaxed">{c.desc}</div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
         </Card>
+      </motion.section>
+
+      {/* NEW SECTION: EDA to Model Rationale */}
+      <motion.section {...sectionAnim}>
+        <SectionHeader n={2} title="Từ EDA đến lựa chọn thuật toán" desc="Tại sao chúng tôi chọn các mô hình này?" />
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card className="glass-card p-6 border-l-4 border-l-primary">
+            <h4 className="font-bold mb-3 flex items-center gap-2">
+              <TrendingUp className="size-4 text-primary" />
+              Lý do chọn Tree-based Models (XGBoost/RF)
+            </h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              EDA chỉ ra rằng mối quan hệ giữa Diện tích và Giá là <strong>phi tuyến (non-linear)</strong>. 
+              Các yếu tố như Quận 1 có "premium" cực cao so với các quận khác. 
+              Mô hình cây (Decision Tree) và các biến thể Ensemble của nó có khả năng bắt được 
+              các <strong>điểm uốn</strong> và <strong>tương tác chéo</strong> (vd: Studio + Quận 1) 
+              tốt hơn nhiều so với Linear Regression truyền thống.
+            </p>
+          </Card>
+          <Card className="glass-card p-6 border-l-4 border-l-accent">
+            <h4 className="font-bold mb-3 flex items-center gap-2">
+              <Sparkles className="size-4 text-accent" />
+              Lý do chọn Ensemble Learning
+            </h4>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Dữ liệu tin đăng có độ nhiễu cao. Một mô hình đơn lẻ thường dễ bị <strong>Overfitting</strong> 
+              (quá khớp) hoặc <strong>Bias</strong> (sai số hệ thống). Việc kết hợp XGBoost (mạnh về học pattern) 
+              với Random Forest (mạnh về tính ổn định) giúp tạo ra một "hội đồng chuyên gia", 
+              tổng hòa ưu điểm và giảm thiểu sai lệch của từng cá nhân.
+            </p>
+          </Card>
+        </div>
       </motion.section>
 
       {/* SECTION 2-3: Models grid */}
