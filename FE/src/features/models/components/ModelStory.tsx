@@ -7,8 +7,27 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@
 import {
   BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Legend, Cell, RadarChart, PolarGrid, PolarAngleAxis, Radar,
 } from "recharts";
-import { Brain, Sparkles, AlertTriangle, CheckCircle2, Cpu, Layers, TrendingUp } from "lucide-react";
-import { MODELS, type ModelKey } from "@/features/data/mockData";
+import { Brain, Sparkles, AlertTriangle, CheckCircle2, Cpu, Layers, TrendingUp, Loader2 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { api } from "@/lib/api";
+import { Skeleton } from "@/components/ui/skeleton";
+
+interface ModelData {
+  key: string;
+  name: string;
+  type: "basic" | "advanced" | "ensemble";
+  MAE: number;
+  RMSE: number;
+  R2: number;
+  MAPE: number;
+  color: string;
+  speed: number;
+  interpret: number;
+  features: string;
+  whyChosen: string;
+  characteristics: string;
+  weakness: string;
+}
 
 const tooltipStyle = {
   background: "oklch(0.23 0.035 260)",
@@ -37,44 +56,18 @@ function SectionHeader({ n, title, desc }: { n: number; title: string; desc?: st
   );
 }
 
-const modelDetails: Record<string, { features: string; whyChosen: string; characteristics: string; weakness: string }> = {
-  "Linear Regression": {
-    features: "Tất cả 24 features (sau encoding)",
-    whyChosen: "Đơn giản, nhanh, dễ giải thích — làm baseline để đánh giá các mô hình phức tạp hơn.",
-    characteristics: "Giả định mối quan hệ tuyến tính giữa feature và giá. Hệ số coefficient cho biết mức ảnh hưởng của từng biến.",
-    weakness: "Không bắt được tương tác phi tuyến (vd: ảnh hưởng kép của diện tích × quận). MAPE cao (18.5%) không đủ chính xác cho production.",
-  },
-  "Decision Tree": {
-    features: "Tất cả 24 features",
-    whyChosen: "Bắt được quy tắc phi tuyến dạng if-then. Trực quan, dễ vẽ ra để giải thích cho stakeholders.",
-    characteristics: "Chia dữ liệu theo các điều kiện (vd: quận = Quận 1 → giá cao). Không cần chuẩn hoá feature.",
-    weakness: "Dễ overfit (max_depth không giới hạn). Variance cao — chỉ cần thay đổi nhỏ data là cây thay đổi nhiều.",
-  },
-  "KNN": {
-    features: "Numerical features (đã chuẩn hoá Min-Max)",
-    whyChosen: "Không cần training — phù hợp cho dataset nhỏ. Recommender system thường xài KNN.",
-    characteristics: "Tìm K=5 phòng tương tự nhất rồi lấy trung bình giá. Distance metric: Euclidean.",
-    weakness: "Chậm khi predict (phải so với toàn bộ dữ liệu). Nhạy cảm với feature scale và curse of dimensionality.",
-  },
-  "Random Forest": {
-    features: "Tất cả 24 features",
-    whyChosen: "Ensemble của nhiều Decision Tree → giảm variance, chống overfit. Robust với outlier.",
-    characteristics: "100 trees, mỗi tree học trên một bootstrap sample khác nhau và một subset feature ngẫu nhiên. Predict bằng trung bình.",
-    weakness: "Nặng hơn 1 cây đơn. Khó giải thích (black-box) so với 1 Decision Tree thuần.",
-  },
-  "XGBoost": {
-    features: "Tất cả 24 features + interaction features",
-    whyChosen: "State-of-the-art cho tabular data. Gradient boosting học được pattern phức tạp mà RF bỏ sót.",
-    characteristics: "300 trees học tuần tự, mỗi cây sửa lỗi cây trước. L1/L2 regularization chống overfit. Hỗ trợ early stopping.",
-    weakness: "Cần tune nhiều hyperparameter (learning_rate, max_depth, n_estimators). Training lâu hơn RF.",
-  },
-};
+// Data is now fetched from Backend
 
 export function ModelStory() {
-  const [selected, setSelected] = useState<ModelKey>("xgb");
+  const [selected, setSelected] = useState<string>("xgb");
   const [ensembleOn, setEnsembleOn] = useState(false);
 
-  const compareData = MODELS.filter(m => m.key !== "ensemble").map(m => ({
+  const { data: models = [], isLoading } = useQuery<ModelData[]>({
+    queryKey: ['models'],
+    queryFn: () => api.getModels(),
+  });
+
+  const compareData = models.filter(m => m.key !== "ensemble").map(m => ({
     name: m.name.replace(" Regression", ""),
     MAE: m.MAE,
     RMSE: m.RMSE,
@@ -83,11 +76,11 @@ export function ModelStory() {
     type: m.type,
   }));
 
-  const radarData = MODELS.filter(m => m.key !== "ensemble").map(m => ({
+  const radarData = models.filter(m => m.key !== "ensemble").map(m => ({
     model: m.name.split(" ")[0],
     accuracy: Math.round(m.R2 * 100),
-    speed: m.key === "knn" ? 35 : m.key === "linear" ? 95 : m.key === "tree" ? 88 : m.key === "rf" ? 65 : 70,
-    interpret: m.key === "linear" ? 95 : m.key === "tree" ? 90 : m.key === "knn" ? 70 : m.key === "rf" ? 50 : 40,
+    speed: m.speed,
+    interpret: m.interpret,
   }));
 
   return (
@@ -157,8 +150,7 @@ export function ModelStory() {
       <motion.section {...sectionAnim}>
         <SectionHeader n={2} title="Mô hình cơ bản & nâng cao" desc="Phân tích chi tiết từng mô hình: input, đặc tính, điểm yếu" />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {MODELS.filter(m => m.key !== "ensemble").map(m => {
-            const d = modelDetails[m.name];
+          {models.filter(m => m.key !== "ensemble").map(m => {
             return (
               <Card key={m.key} className="glass-card p-5 hover:border-primary/40 transition-colors">
                 <div className="flex items-start justify-between mb-3">
@@ -171,10 +163,10 @@ export function ModelStory() {
                 </div>
                 <h3 className="font-semibold mb-3">{m.name}</h3>
                 <div className="space-y-2 text-xs">
-                  <div><span className="text-muted-foreground">Input:</span> <span className="text-foreground/90">{d.features}</span></div>
-                  <div><span className="text-muted-foreground">Vì sao chọn:</span> <span className="text-foreground/90">{d.whyChosen}</span></div>
-                  <div><span className="text-muted-foreground">Đặc tính:</span> <span className="text-foreground/90">{d.characteristics}</span></div>
-                  <div><span className="text-muted-foreground">Điểm yếu:</span> <span className="text-destructive/90">{d.weakness}</span></div>
+                  <div><span className="text-muted-foreground">Input:</span> <span className="text-foreground/90">{m.features}</span></div>
+                  <div><span className="text-muted-foreground">Vì sao chọn:</span> <span className="text-foreground/90">{m.whyChosen}</span></div>
+                  <div><span className="text-muted-foreground">Đặc tính:</span> <span className="text-foreground/90">{m.characteristics}</span></div>
+                  <div><span className="text-muted-foreground">Điểm yếu:</span> <span className="text-destructive/90">{m.weakness}</span></div>
                 </div>
                 <div className="mt-3 pt-3 border-t border-border grid grid-cols-3 gap-2 text-center">
                   <div><div className="text-[10px] text-muted-foreground">MAE</div><div className="text-sm font-bold">{m.MAE}</div></div>
@@ -200,17 +192,25 @@ export function ModelStory() {
                 <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "oklch(1 0 0 / 0.05)" }} />
                 <Legend wrapperStyle={{ fontSize: 12 }} />
                 <Bar dataKey="MAE" name="MAE (tr)" radius={[4, 4, 0, 0]}>
-                  {compareData.map((d, i) => <Cell key={i} fill={d.type === "basic" ? "oklch(0.78 0.17 75)" : "oklch(0.65 0.21 265)"} />)}
+                  {compareData.map((d, i) => (
+                    <Cell key={`cell-mae-${i}`} fill={d.type === "basic" ? "oklch(0.78 0.17 75)" : "oklch(0.65 0.21 265)"} />
+                  ))}
                 </Bar>
                 <Bar dataKey="RMSE" name="RMSE (tr)" radius={[4, 4, 0, 0]}>
-                  {compareData.map((d, i) => <Cell key={i} fill={d.type === "basic" ? "oklch(0.7 0.2 25)" : "oklch(0.7 0.18 160)"} />)}
+                  {compareData.map((d, i) => (
+                    <Cell key={`cell-rmse-${i}`} fill={d.type === "basic" ? "oklch(0.7 0.2 25)" : "oklch(0.7 0.18 160)"} />
+                  ))}
                 </Bar>
               </BarChart>
             </ResponsiveContainer>
           </div>
           <div className="mt-4 rounded-lg bg-success/10 border border-success/30 p-3 text-sm">
             <span className="font-semibold text-success">Kết quả:</span>{" "}
-            XGBoost đạt MAE chỉ 0.41tr (giảm 50% so với Linear) và MAPE 7.1% — đủ tốt cho production.
+            {models.length > 0 ? (
+              `Mô hình ${models.find(m => m.type === 'advanced')?.name || 'AI'} đạt hiệu suất vượt trội, giảm sai số đáng kể so với các phương pháp cơ bản.`
+            ) : (
+              "Đang phân tích dữ liệu hiệu suất..."
+            )}
           </div>
         </Card>
       </motion.section>
@@ -231,7 +231,17 @@ export function ModelStory() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {MODELS.map(m => (
+              {isLoading && Array.from({ length: 5 }).map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-16" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-8 ml-auto" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-8 ml-auto" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-8 ml-auto" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-8 ml-auto" /></TableCell>
+                </TableRow>
+              ))}
+              {!isLoading && models.map((m) => (
                 <TableRow key={m.key} className="border-border hover:bg-foreground/5">
                   <TableCell className="font-medium">{m.name}</TableCell>
                   <TableCell>
@@ -295,9 +305,9 @@ export function ModelStory() {
 
           <div className="grid grid-cols-4 gap-3 mt-6">
             {(["MAE", "RMSE", "R2", "MAPE"] as const).map(k => {
-              const before = MODELS.find(m => m.key === "xgb")!;
-              const after = MODELS.find(m => m.key === "ensemble")!;
-              const v = ensembleOn ? after[k] : before[k];
+              const before = models.find(m => m.key === "xgb") || { MAE: 0, RMSE: 0, R2: 0, MAPE: 0 };
+              const after = models.find(m => m.key === "ensemble") || { MAE: 0, RMSE: 0, R2: 0, MAPE: 0 };
+              const v = ensembleOn ? (after as any)[k] : (before as any)[k];
               return (
                 <div key={k} className="rounded-xl border border-border bg-foreground/5 p-4 text-center">
                   <div className="text-[10px] uppercase tracking-wider text-muted-foreground">{k === "R2" ? "R²" : k}</div>
@@ -335,7 +345,7 @@ export function ModelStory() {
         <SectionHeader n={6} title="Chọn mô hình & so sánh đa chiều" desc="So sánh độ chính xác, tốc độ và khả năng giải thích" />
         <Card className="glass-card p-6">
           <div className="flex flex-wrap gap-2 mb-5">
-            {MODELS.filter(m => m.key !== "ensemble").map(m => (
+            {models.filter(m => m.key !== "ensemble").map(m => (
               <Button
                 key={m.key}
                 variant={selected === m.key ? "default" : "outline"}
@@ -348,7 +358,8 @@ export function ModelStory() {
             ))}
           </div>
           <div className="grid lg:grid-cols-[1fr_280px] gap-6">
-            <div className="h-72">
+            <div className="h-72 relative">
+              {isLoading && <div className="absolute inset-0 flex items-center justify-center bg-background/50 z-10"><Loader2 className="animate-spin" /></div>}
               <ResponsiveContainer width="100%" height="100%">
                 <RadarChart data={radarData}>
                   <PolarGrid stroke="oklch(1 0 0 / 0.1)" />
@@ -363,8 +374,8 @@ export function ModelStory() {
             </div>
             <div className="space-y-3">
               {(() => {
-                const m = MODELS.find(x => x.key === selected)!;
-                const d = modelDetails[m.name];
+                const m = models.find(x => x.key === selected);
+                if (!m) return null;
                 return (
                   <>
                     <div className="rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 border border-primary/30 p-4">
@@ -377,7 +388,7 @@ export function ModelStory() {
                         <div>MAPE: <span className="font-bold">{m.MAPE}%</span></div>
                       </div>
                     </div>
-                    <div className="text-xs text-muted-foreground leading-relaxed">{d.characteristics}</div>
+                    <div className="text-xs text-muted-foreground leading-relaxed">{m.characteristics}</div>
                   </>
                 );
               })()}

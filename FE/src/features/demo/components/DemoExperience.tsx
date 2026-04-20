@@ -7,10 +7,13 @@ import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ShieldCheck, ShieldAlert, MapPin, Maximize2, AlertTriangle, School, Hospital, Droplets, TrendingDown, TrendingUp as TrendUp, Lightbulb, Map } from "lucide-react";
+import { ShieldCheck, ShieldAlert, MapPin, Maximize2, AlertTriangle, School, Hospital, Droplets, TrendingDown, TrendingUp as TrendUp, Lightbulb, Map, Loader2 } from "lucide-react";
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer } from "recharts";
-import { MOCK_PROPERTIES, DISTRICT_BASE } from "@/features/data/mockData";
+import { type Property } from "@/features/data/mockData";
 import { PropertyMap } from "./PropertyMap";
+import { useQuery } from "@tanstack/react-query";
+import { api } from "@/lib/api";
+import { Skeleton } from "@/components/ui/skeleton";
 
 type SortKey = "score" | "price" | "amenities";
 
@@ -22,34 +25,41 @@ export function DemoExperience() {
   const [avoidDanger, setAvoidDanger] = useState(true);
   const [sort, setSort] = useState<SortKey>("score");
 
+  const { data: properties = [], isLoading } = useQuery<Property[]>({
+    queryKey: ['properties', budget],
+    queryFn: () => api.getProperties({ maxPrice: budget }),
+  });
+
+  const { data: districts = [] } = useQuery<{name: string, avg_price: number, count: number}[]>({
+    queryKey: ['districts'],
+    queryFn: () => api.getDistricts(),
+  });
+
   const ranked = useMemo(() => {
-    const filtered = MOCK_PROPERTIES.filter(p => {
-      if (p.aiPrice / 1_000_000 > budget + 1) return false;
-      if (nearSchool && !p.nearSchool) return false;
-      if (nearHospital && !p.nearHospital) return false;
-      if (floodSafe && !p.floodSafe) return false;
-      if (avoidDanger && p.dangerZone) return false;
-      return true;
-    }).map(p => {
-      // Composite ranking score
+    const processed = properties.map((p) => {
+      // Composite ranking score logic (can keep FE-side for interactivity)
       const priceMatch = Math.max(0, 100 - Math.abs(p.aiPrice / 1_000_000 - budget) * 15);
       const locationScore = ["Quận 1", "Quận 3", "Quận 10"].includes(p.district) ? 90 : 65;
-      const amenityScore = Math.min(100, p.amenities.length * 14);
+      const amenityScore = Math.min(100, (p.amenities?.length || 0) * 14);
       const score = Math.round(priceMatch * 0.5 + locationScore * 0.25 + amenityScore * 0.25);
       return { ...p, score, priceMatch, locationScore, amenityScore };
     });
-    if (sort === "price") return filtered.sort((a, b) => a.price - b.price);
-    if (sort === "amenities") return filtered.sort((a, b) => b.amenities.length - a.amenities.length);
-    return filtered.sort((a, b) => b.score - a.score);
-  }, [budget, nearSchool, nearHospital, floodSafe, avoidDanger, sort]);
+
+    if (sort === "price") return processed.sort((a, b) => a.price - b.price);
+    if (sort === "amenities") return processed.sort((a, b) => (b.amenities?.length || 0) - (a.amenities?.length || 0));
+    return processed.sort((a, b) => b.score - a.score);
+  }, [properties, budget, sort]);
 
   // Smart suggestion
-  const affordableDistricts = Object.entries(DISTRICT_BASE)
-    .filter(([, p]) => p / 1_000_000 <= budget + 1)
-    .sort(([, a], [, b]) => b - a)
-    .map(([d]) => d);
+  const affordableDistricts = useMemo(() => {
+    return districts
+      .filter(d => d.avg_price / 1_000_000 <= budget + 0.5)
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 5)
+      .map(d => d.name);
+  }, [districts, budget]);
 
-  const showAlert = budget < 4 && ranked.every(p => !["Quận 1", "Quận 3"].includes(p.district));
+  const showAlert = budget < 4 && ranked.length > 0 && !ranked.some(p => ["Quận 1", "Quận 3", "Quận 10"].includes(p.district));
 
   return (
     <div className="grid lg:grid-cols-[320px_1fr] gap-6">
@@ -123,11 +133,7 @@ export function DemoExperience() {
               <span className="font-semibold text-sm">Bản đồ vị trí</span>
               <Badge variant="outline" className="text-[10px]">{ranked.length} phòng</Badge>
             </div>
-            <div className="flex items-center gap-3 text-[11px] text-muted-foreground">
-              <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-green-500 inline-block" /> Giá hợp lý</span>
-              <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-orange-500 inline-block" /> Giá quá rẻ</span>
-              <span className="flex items-center gap-1"><span className="size-2.5 rounded-full bg-red-500 inline-block" /> Cảnh báo lừa đảo</span>
-            </div>
+            {isLoading && <Loader2 className="size-3.5 animate-spin text-muted-foreground" />}
           </div>
           <div className="px-4 pb-4">
             <PropertyMap properties={ranked.slice(0, 12)} />
@@ -135,8 +141,19 @@ export function DemoExperience() {
         </Card>
 
         <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-4">
+          {isLoading && Array.from({ length: 6 }).map((_, i) => (
+            <Card key={i} className="glass-card p-4 h-[300px] flex flex-col gap-4">
+              <Skeleton className="h-6 w-3/4" />
+              <Skeleton className="h-4 w-1/2" />
+              <div className="grid grid-cols-2 gap-2">
+                <Skeleton className="h-12 w-full" />
+                <Skeleton className="h-12 w-full" />
+              </div>
+              <Skeleton className="flex-1 w-full" />
+            </Card>
+          ))}
           <AnimatePresence mode="popLayout">
-            {ranked.slice(0, 12).map((p, i) => {
+            {!isLoading && ranked.slice(0, 12).map((p, i) => {
               const ratio = p.price / p.aiPrice;
               const isOverpriced = ratio > 1.3;
               const isSuspiciouslyCheap = ratio < 0.6;

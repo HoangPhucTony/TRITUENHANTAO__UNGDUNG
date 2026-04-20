@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -9,8 +9,28 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, CartesianGrid, Cell } from "recharts";
-import { Sparkles, TrendingUp, ShieldCheck, Zap } from "lucide-react";
-import { DISTRICTS, predictPrice, MODELS, type ModelKey } from "@/features/data/mockData";
+import { Sparkles, TrendingUp, ShieldCheck, Zap, AlertCircle, Loader2 } from "lucide-react";
+import { type ModelKey } from "@/features/data/mockData";
+import { api } from "@/lib/api";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { toast } from "sonner";
+
+interface Factor {
+  label: string;
+  value: number;
+}
+
+interface PredictionResult {
+  price: number;
+  factors: Factor[];
+  confidence: number;
+  model: {
+    key: string;
+    name: string;
+    MAE: number;
+    R2: number;
+  };
+}
 
 const tooltipStyle = {
   background: "oklch(0.23 0.035 260)",
@@ -22,181 +42,283 @@ const tooltipStyle = {
 
 export function PredictionPanel() {
   const [area, setArea] = useState(25);
-  const [district, setDistrict] = useState("Quận 1");
+  const [district, setDistrict] = useState<string>("");
   const [isStudio, setIsStudio] = useState(false);
   const [hasBalcony, setHasBalcony] = useState(true);
   const [hasFurniture, setHasFurniture] = useState(true);
   const [hasElevator, setHasElevator] = useState(false);
   const [isNew, setIsNew] = useState(false);
+  const [hasMezzanine, setHasMezzanine] = useState(false);
+  const [hasWindow, setHasWindow] = useState(true);
   const [model, setModel] = useState<ModelKey | "auto">("auto");
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<ReturnType<typeof predictPrice> | null>(null);
+  const [result, setResult] = useState<PredictionResult | null>(null);
+
+  // Queries
+  const { data: models = [], isLoading: isLoadingModels } = useQuery<any[]>({
+    queryKey: ['models'],
+    queryFn: () => api.getModels(),
+  });
+
+  const { data: districts = [], isLoading: isLoadingDistricts } = useQuery<{ name: string, avg_price: number, count: number }[]>({
+    queryKey: ['districts'],
+    queryFn: () => api.getDistricts(),
+  });
+
+  // Handle default district
+  useEffect(() => {
+    if (districts.length > 0 && !district) {
+      setDistrict(districts[0].name);
+    }
+  }, [districts, district]);
+
+  const currentDistrict = useMemo(() => district || (districts[0]?.name) || "Quận 1", [district, districts]);
+
+  // Mutation
+  const mutation = useMutation({
+    mutationFn: (data: any) => api.predict(data),
+    onSuccess: (data) => {
+      setResult(data);
+      toast.success("Dự đoán thành công!");
+    },
+    onError: (err: any) => {
+      console.error("Prediction Error:", err);
+      toast.error(err.message || "Không thể kết nối Backend. Vui lòng thử lại sau.");
+    }
+  });
 
   const handlePredict = () => {
-    setLoading(true);
-    setResult(null);
-    setTimeout(() => {
-      const chosen: ModelKey = model === "auto" ? "ensemble" : model;
-      setResult(predictPrice({ area, district, isStudio, hasBalcony, hasFurniture, hasElevator, isNew, model: chosen }));
-      setLoading(false);
-    }, 1100);
+    if (!currentDistrict) {
+      toast.error("Vui lòng chọn vị trí!");
+      return;
+    }
+    const chosen: ModelKey = model === "auto" ? "ensemble" : (model as ModelKey);
+    mutation.mutate({
+      area,
+      district: currentDistrict,
+      isStudio,
+      hasBalcony,
+      hasFurniture,
+      hasElevator,
+      isNew,
+      hasMezzanine,
+      hasWindow,
+      model: chosen
+    });
   };
 
+  const isPredicting = mutation.isPending;
+
   return (
-    <div className="grid lg:grid-cols-2 gap-6">
+    <div className="grid lg:grid-cols-2 gap-6 items-start">
       {/* LEFT: Input */}
       <Card className="glass-card p-6 space-y-6">
-        <div>
-          <h3 className="font-semibold mb-1">Thông tin phòng</h3>
-          <p className="text-xs text-muted-foreground">Nhập đặc điểm phòng để AI dự đoán giá hợp lý.</p>
-        </div>
-
-        <div className="space-y-2">
-          <div className="flex justify-between">
-            <Label>Diện tích</Label>
-            <span className="text-sm font-semibold text-primary">{area} m²</span>
+        <div className="flex items-center justify-between">
+          <div>
+            <h3 className="font-semibold text-lg">Thông tin phòng</h3>
+            <p className="text-xs text-muted-foreground">AI sẽ phân tích dựa trên đặc điểm bạn nhập.</p>
           </div>
-          <Slider value={[area]} onValueChange={v => setArea(v[0])} min={15} max={80} step={1} />
-        </div>
-
-        <div className="space-y-2">
-          <Label>Vị trí (quận)</Label>
-          <Select value={district} onValueChange={setDistrict}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              {DISTRICTS.map(d => <SelectItem key={d} value={d}>{d}</SelectItem>)}
-            </SelectContent>
-          </Select>
-        </div>
-
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <Label>Mô hình AI</Label>
-            {model === "auto" && <Badge className="bg-primary/15 text-primary border-primary/30 text-[10px]"><Zap className="size-3 mr-1" />Auto</Badge>}
+          <div className="size-10 rounded-full bg-primary/10 grid place-items-center">
+            <Zap className="size-5 text-primary" />
           </div>
-          <Select value={model} onValueChange={v => setModel(v as ModelKey | "auto")}>
-            <SelectTrigger><SelectValue /></SelectTrigger>
-            <SelectContent>
-              <SelectItem value="auto">🤖 Auto (gợi ý: Ensemble)</SelectItem>
-              {MODELS.map(m => <SelectItem key={m.key} value={m.key}>{m.name} (R²={m.R2})</SelectItem>)}
-            </SelectContent>
-          </Select>
-          <p className="text-[11px] text-muted-foreground">Hệ thống tự chọn Ensemble cho độ chính xác cao nhất, hoặc bạn có thể chọn thủ công.</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-3">
+        <div className="space-y-3">
+          <div className="flex justify-between items-center">
+            <Label className="text-sm font-medium">Diện tích</Label>
+            <Badge variant="secondary" className="font-mono">{area} m²</Badge>
+          </div>
+          <Slider
+            value={[area]}
+            onValueChange={v => setArea(v[0])}
+            min={15}
+            max={80}
+            step={1}
+            className="py-4"
+          />
+        </div>
+
+        <div className="grid sm:grid-cols-2 gap-4">
+          <div className="space-y-2">
+            <Label className="text-xs text-muted-foreground">Vị trí (quận)</Label>
+            <Select value={currentDistrict} onValueChange={setDistrict} disabled={isLoadingDistricts}>
+              <SelectTrigger className="bg-foreground/5">
+                <SelectValue placeholder={isLoadingDistricts ? "Đang tải..." : "Chọn quận"} />
+              </SelectTrigger>
+              <SelectContent>
+                {districts.map((d) => (
+                  <SelectItem key={d.name} value={d.name}>{d.name}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div className="space-y-2">
+            <Label className="text-xs text-muted-foreground">Mô hình AI</Label>
+            <Select value={model} onValueChange={v => setModel(v as ModelKey | "auto")}>
+              <SelectTrigger className="bg-foreground/5">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="auto">🤖 Auto (Ensemble)</SelectItem>
+                {models.map(m => (
+                  <SelectItem key={m.key} value={m.key}>{m.name}</SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {[
             { l: "Studio", v: isStudio, s: setIsStudio },
             { l: "Ban công", v: hasBalcony, s: setHasBalcony },
             { l: "Nội thất", v: hasFurniture, s: setHasFurniture },
             { l: "Thang máy", v: hasElevator, s: setHasElevator },
             { l: "Nhà mới", v: isNew, s: setIsNew },
+            { l: "Gác lửng", v: hasMezzanine, s: setHasMezzanine },
+            { l: "Cửa sổ", v: hasWindow, s: setHasWindow },
           ].map(o => (
-            <div key={o.l} className="flex items-center justify-between rounded-lg border border-border bg-foreground/5 px-3 py-2.5">
-              <Label className="text-sm">{o.l}</Label>
-              <Switch checked={o.v} onCheckedChange={o.s} />
+            <div key={o.l} className="flex items-center justify-between rounded-xl border border-border/50 bg-foreground/5 px-3 py-2">
+              <Label className="text-[11px] font-medium cursor-pointer" onClick={() => o.s(!o.v)}>{o.l}</Label>
+              <Switch checked={o.v} onCheckedChange={(checked) => o.s(checked)} />
             </div>
           ))}
         </div>
 
-        <Button onClick={handlePredict} size="lg" className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 glow-primary">
-          <Sparkles className="size-4 mr-2" /> Dự đoán giá
+        <Button
+          onClick={handlePredict}
+          disabled={isPredicting || isLoadingDistricts}
+          size="lg"
+          className="w-full bg-gradient-to-r from-primary to-accent hover:opacity-90 glow-primary transition-all active:scale-[0.98]"
+        >
+          {isPredicting ? (
+            <><Loader2 className="size-4 mr-2 animate-spin" /> Đang tính toán...</>
+          ) : (
+            <><Sparkles className="size-4 mr-2" /> Dự đoán ngay</>
+          )}
         </Button>
       </Card>
 
       {/* RIGHT: Result */}
-      <Card className="glass-card p-6">
-        <h3 className="font-semibold mb-4">Kết quả dự đoán</h3>
+      <Card className="glass-card p-6 min-h-[480px] flex flex-col">
+        <div className="flex items-center gap-2 mb-6">
+          <TrendingUp className="size-4 text-primary" />
+          <h3 className="font-semibold">Kết quả phân tích</h3>
+        </div>
+
         <AnimatePresence mode="wait">
-          {loading && (
-            <motion.div key="load" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-4">
-              <div className="text-center py-4">
+          {isPredicting ? (
+            <motion.div
+              key="loading"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex-1 flex flex-col items-center justify-center space-y-6"
+            >
+              <div className="relative">
                 <motion.div
                   animate={{ rotate: 360 }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: "linear" }}
-                  className="size-12 rounded-full border-2 border-primary border-t-transparent mx-auto mb-3"
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                  className="size-20 rounded-full border-4 border-primary/20 border-t-primary"
                 />
-                <p className="text-sm text-muted-foreground">AI đang phân tích {Object.keys({ area, district }).length}+ đặc trưng…</p>
+                <Sparkles className="absolute inset-0 m-auto size-6 text-primary animate-pulse" />
               </div>
-              <Skeleton className="h-24 w-full" />
-              <Skeleton className="h-48 w-full" />
+              <div className="text-center space-y-2">
+                <p className="text-sm font-medium animate-pulse">AI đang phân tích các đặc trưng...</p>
+                <div className="flex gap-1 justify-center">
+                  {[0, 1, 2].map(i => (
+                    <motion.div
+                      key={i}
+                      animate={{ opacity: [0.3, 1, 0.3] }}
+                      transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }}
+                      className="size-1.5 rounded-full bg-primary"
+                    />
+                  ))}
+                </div>
+              </div>
             </motion.div>
-          )}
-          {!loading && result && (
-            <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="space-y-5">
-              <div className="rounded-2xl bg-gradient-to-br from-primary/25 via-accent/15 to-primary/5 border border-primary/30 p-6 relative overflow-hidden group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                  <Sparkles className="size-24" />
+          ) : result ? (
+            <motion.div
+              key="result"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="space-y-6 flex-1 flex flex-col"
+            >
+              {/* Price Display */}
+              <div className="rounded-3xl bg-gradient-to-br from-primary/20 via-accent/10 to-transparent border border-primary/20 p-8 text-center relative overflow-hidden group">
+                <div className="absolute -top-12 -right-12 size-32 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-colors" />
+                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-2">Giá thuê gợi ý</div>
+                <div className="text-6xl font-black text-gradient">
+                  {(result.price / 1_000_000).toFixed(1)} <span className="text-2xl font-bold">triệu</span>
                 </div>
-                <div className="flex items-center justify-between mb-2 relative z-10">
-                  <div className="text-xs uppercase tracking-wider text-muted-foreground flex items-center gap-1.5">
-                    <TrendingUp className="size-3" />
-                    Mức giá AI khuyến nghị
-                  </div>
-                  <div className="flex gap-2">
-                    {result.confidence > 90 && (
-                      <Badge className="bg-amber-500/20 text-amber-500 border-amber-500/30 text-[10px]">
-                        ⭐ Premium
-                      </Badge>
-                    )}
-                    <Badge className="bg-success/20 text-success border-success/30 text-[10px]">
-                      <ShieldCheck className="size-3 mr-1" />Tin cậy {result.confidence}%
-                    </Badge>
-                  </div>
-                </div>
-                <motion.div 
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2, type: "spring" }}
-                  className="text-5xl font-bold text-gradient relative z-10"
-                >
-                  {(result.price / 1_000_000).toFixed(1)} triệu
-                </motion.div>
-                <div className="text-sm text-muted-foreground mt-1 relative z-10">/ tháng · {area}m² · {district}</div>
-                <div className="text-[11px] text-muted-foreground mt-3 pt-3 border-t border-border flex justify-between items-center relative z-10">
-                  <span>Mô hình: <span className="text-foreground font-medium">{result.model.name}</span></span>
-                  <span className="font-mono opacity-80">MAE {result.model.MAE}tr</span>
+                <div className="mt-4 flex flex-wrap justify-center gap-2">
+                  <Badge variant="outline" className="bg-background/50 backdrop-blur-sm border-primary/20">
+                    <ShieldCheck className="size-3 mr-1 text-success" /> Tin cậy {result.confidence}%
+                  </Badge>
+                  <Badge variant="outline" className="bg-background/50 backdrop-blur-sm border-primary/20">
+                    {result.model.name}
+                  </Badge>
                 </div>
               </div>
 
-              <div>
-                <div className="flex items-center gap-2 text-sm font-medium mb-3">
-                  <TrendingUp className="size-4 text-primary" />
-                  Vì sao giá này? — Explainable AI
+              {/* Factors Chart */}
+              <div className="flex-1 space-y-4">
+                <div className="text-sm font-medium flex items-center gap-2 px-1">
+                  <ShieldCheck className="size-4 text-primary" />
+                  Các yếu tố ảnh hưởng
                 </div>
-                <div className="h-56">
+                <div className="h-48">
                   <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={result.factors} layout="vertical" margin={{ left: 10 }}>
-                      <CartesianGrid stroke="oklch(1 0 0 / 0.06)" horizontal={false} />
-                      <XAxis type="number" stroke="oklch(0.72 0.025 260)" fontSize={11} tickFormatter={v => `${v >= 0 ? "+" : ""}${(v / 1_000_000).toFixed(1)}M`} />
-                      <YAxis dataKey="label" type="category" stroke="oklch(0.72 0.025 260)" fontSize={11} width={130} />
-                      <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "oklch(1 0 0 / 0.05)" }} formatter={(v: number) => `${v >= 0 ? "+" : ""}${(v / 1_000_000).toFixed(2)} triệu`} />
-                      <Bar dataKey="value" radius={[0, 6, 6, 0]}>
+                    <BarChart data={result.factors} layout="vertical" margin={{ left: -10, right: 40 }}>
+                      <CartesianGrid stroke="oklch(1 0 0 / 0.05)" horizontal={false} />
+                      <XAxis type="number" hide />
+                      <YAxis
+                        dataKey="label"
+                        type="category"
+                        stroke="var(--color-muted-foreground)"
+                        fontSize={10}
+                        width={120}
+                        tickLine={false}
+                        axisLine={false}
+                      />
+                      <Tooltip contentStyle={tooltipStyle} cursor={{ fill: "var(--color-primary)", fillOpacity: 0.05 }} />
+                      <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={20}>
                         {result.factors.map((f, i) => (
-                          <Cell key={i} fill={f.value >= 0 ? "oklch(0.65 0.21 265)" : "oklch(0.78 0.17 75)"} />
+                          <Cell
+                            key={`cell-${i}`}
+                            fill={f.value >= 0 ? "var(--color-primary)" : "var(--color-warning)"}
+                            fillOpacity={0.8}
+                          />
                         ))}
                       </Bar>
                     </BarChart>
                   </ResponsiveContainer>
                 </div>
-                <ul className="mt-3 space-y-1 text-xs text-muted-foreground">
+                <div className="grid grid-cols-2 gap-2">
                   {result.factors.map(f => (
-                    <li key={f.label} className="flex items-center justify-between">
-                      <span>• {f.label}</span>
-                      <span className={f.value >= 0 ? "text-primary font-mono" : "text-warning font-mono"}>
-                        {f.value >= 0 ? "+" : ""}{(f.value / 1_000_000).toFixed(2)}M
+                    <div key={f.label} className="text-[10px] flex items-center justify-between px-2 py-1.5 rounded-lg bg-foreground/5 border border-border/30">
+                      <span className="text-muted-foreground truncate mr-2">{f.label}</span>
+                      <span className={`font-bold ${f.value >= 0 ? "text-primary" : "text-warning"}`}>
+                        {f.value >= 0 ? "+" : ""}{(f.value / 1_000_000).toFixed(1)}M
                       </span>
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
             </motion.div>
-          )}
-          {!loading && !result && (
-            <motion.div key="empty" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-80 grid place-items-center text-center text-muted-foreground">
-              <div>
-                <Sparkles className="size-10 mx-auto mb-3 text-primary/50" />
-                <p className="text-sm">Nhập thông tin và bấm "Dự đoán giá" để xem kết quả</p>
+          ) : (
+            <motion.div
+              key="empty"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="flex-1 flex flex-col items-center justify-center text-center p-8 space-y-4"
+            >
+              <div className="size-16 rounded-2xl bg-foreground/5 border border-dashed border-border grid place-items-center">
+                <Sparkles className="size-8 text-primary/30" />
+              </div>
+              <div className="space-y-1">
+                <p className="font-medium">Chưa có dữ liệu dự đoán</p>
+                <p className="text-xs text-muted-foreground max-w-[200px]">Điền thông tin và bấm nút dự đoán để AI bắt đầu làm việc.</p>
               </div>
             </motion.div>
           )}

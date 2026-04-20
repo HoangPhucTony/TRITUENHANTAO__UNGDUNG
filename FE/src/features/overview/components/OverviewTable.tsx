@@ -2,11 +2,17 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { MOCK_PROPERTIES } from "@/features/data/mockData";
-import { Database, ExternalLink } from "lucide-react";
+import { Database, ExternalLink, Loader2 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { api } from "@/lib/api";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export function OverviewTable() {
-  const rows = MOCK_PROPERTIES.slice(0, 12);
+  const { data: properties = [], isLoading } = useQuery<any[]>({
+    queryKey: ['properties', 'overview'],
+    queryFn: () => api.getProperties({ limit: 12 }),
+  });
+
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }}
@@ -18,7 +24,7 @@ export function OverviewTable() {
         <Card className="glass-card p-5 lg:col-span-2">
           <div className="flex items-center gap-2 mb-2">
             <Database className="size-4 text-primary" />
-            <h3 className="font-semibold">Dataset: PhongTro.xlsx</h3>
+            <h3 className="font-semibold">Dataset: phongtro_cleaned.csv</h3>
           </div>
           <p className="text-sm text-muted-foreground leading-relaxed">
             Dữ liệu được crawl từ <span className="text-foreground font-medium inline-flex items-center gap-1">phongtro123.com <ExternalLink className="size-3" /></span> trong giai đoạn 2024-2025,
@@ -34,9 +40,9 @@ export function OverviewTable() {
           <ul className="space-y-2 text-sm">
             {[
               "8 cột gốc + 16 cột feature engineering",
-              "10 quận trung tâm TP.HCM",
-              "Giá: 2tr - 12tr/tháng",
-              "Diện tích: 15m² - 80m²",
+              "Tất cả 24 quận huyện TP.HCM",
+              "Giá: 2tr - 80tr/tháng",
+              "Diện tích: 12m² - 125m²",
               "Tiện ích: nội thất, thang máy, ban công…",
             ].map(t => (
               <li key={t} className="flex items-start gap-2">
@@ -50,12 +56,14 @@ export function OverviewTable() {
 
       <div className="flex items-end justify-between">
         <div>
-          <h2 className="text-xl font-semibold">Mẫu dữ liệu</h2>
-          <p className="text-sm text-muted-foreground">Hiển thị 12/{MOCK_PROPERTIES.length} bản ghi đầu tiên</p>
+          <h2 className="text-xl font-semibold">Mẫu dữ liệu thực tế</h2>
+          <p className="text-sm text-muted-foreground">Hiển thị mẫu ngẫu nhiên từ cơ sở dữ liệu</p>
         </div>
-        <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/30">
-          {MOCK_PROPERTIES.length} bản ghi
-        </Badge>
+        {!isLoading && (
+          <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/30">
+            {properties.length} bản ghi mẫu
+          </Badge>
+        )}
       </div>
       <Card className="glass-card overflow-hidden">
         <Table>
@@ -69,21 +77,33 @@ export function OverviewTable() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {rows.map(p => (
-              <TableRow key={p.id} className="border-border hover:bg-foreground/5">
-                <TableCell className="font-medium">{p.title}</TableCell>
-                <TableCell>{p.area} m²</TableCell>
-                <TableCell className="font-semibold text-primary">{(p.price / 1_000_000).toFixed(1)} triệu</TableCell>
-                <TableCell>{p.district}</TableCell>
-                <TableCell>
-                  <div className="flex flex-wrap gap-1">
-                    {p.amenities.slice(0, 3).map(a => (
-                      <Badge key={a} variant="outline" className="text-[10px]">{a}</Badge>
-                    ))}
-                  </div>
-                </TableCell>
-              </TableRow>
-            ))}
+            {isLoading ? (
+              Array.from({ length: 5 }).map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-12" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-16" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-20" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
+                </TableRow>
+              ))
+            ) : (
+              properties.map(p => (
+                <TableRow key={p.id} className="border-border hover:bg-foreground/5">
+                  <TableCell className="font-medium max-w-[300px] truncate">{p.title}</TableCell>
+                  <TableCell>{p.area} m²</TableCell>
+                  <TableCell className="font-semibold text-primary">{(p.price / 1_000_000).toFixed(1)} triệu</TableCell>
+                  <TableCell>{p.district}</TableCell>
+                  <TableCell>
+                    <div className="flex flex-wrap gap-1">
+                      {p.amenities?.slice(0, 3).map((a: string) => (
+                        <Badge key={a} variant="outline" className="text-[10px]">{a}</Badge>
+                      ))}
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))
+            )}
           </TableBody>
         </Table>
       </Card>
