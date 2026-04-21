@@ -1,0 +1,10 @@
+{
+  "name": "smartstay-ai-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "dev:fe": "npm --prefix FE run dev",
+    "dev:be": "node scripts/run-backend.mjs",
+    "build:fe": "npm --prefix FE run build"
+  }
+}
