@@ -1,0 +1,6 @@
+Loaded model: linear
+Loaded model: rf
+Loaded model: xgb
+Trained KNN and DecisionTree on the fly.
+INFO:     127.0.0.1:57324 - "OPTIONS /api/models/ HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57324 - "OPTIONS /api/models/ HTTP/1.1" 400 Bad Request

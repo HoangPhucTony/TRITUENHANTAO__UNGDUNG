@@ -9,15 +9,15 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as PredictRouteImport } from './routes/predict'
+import { Route as PredictionRouteImport } from './routes/prediction'
 import { Route as ModelRouteImport } from './routes/model'
 import { Route as EdaRouteImport } from './routes/eda'
 import { Route as DemoRouteImport } from './routes/demo'
 import { Route as IndexRouteImport } from './routes/index'
 
-const PredictRoute = PredictRouteImport.update({
-  id: '/predict',
-  path: '/predict',
+const PredictionRoute = PredictionRouteImport.update({
+  id: '/prediction',
+  path: '/prediction',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ModelRoute = ModelRouteImport.update({
@@ -46,14 +46,14 @@ export interface FileRoutesByFullPath {
   '/demo': typeof DemoRoute
   '/eda': typeof EdaRoute
   '/model': typeof ModelRoute
-  '/predict': typeof PredictRoute
+  '/prediction': typeof PredictionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/demo': typeof DemoRoute
   '/eda': typeof EdaRoute
   '/model': typeof ModelRoute
-  '/predict': typeof PredictRoute
+  '/prediction': typeof PredictionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -61,14 +61,14 @@ export interface FileRoutesById {
   '/demo': typeof DemoRoute
   '/eda': typeof EdaRoute
   '/model': typeof ModelRoute
-  '/predict': typeof PredictRoute
+  '/prediction': typeof PredictionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/demo' | '/eda' | '/model' | '/predict'
+  fullPaths: '/' | '/demo' | '/eda' | '/model' | '/prediction'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/demo' | '/eda' | '/model' | '/predict'
-  id: '__root__' | '/' | '/demo' | '/eda' | '/model' | '/predict'
+  to: '/' | '/demo' | '/eda' | '/model' | '/prediction'
+  id: '__root__' | '/' | '/demo' | '/eda' | '/model' | '/prediction'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,16 +76,16 @@ export interface RootRouteChildren {
   DemoRoute: typeof DemoRoute
   EdaRoute: typeof EdaRoute
   ModelRoute: typeof ModelRoute
-  PredictRoute: typeof PredictRoute
+  PredictionRoute: typeof PredictionRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/predict': {
-      id: '/predict'
-      path: '/predict'
-      fullPath: '/predict'
-      preLoaderRoute: typeof PredictRouteImport
+    '/prediction': {
+      id: '/prediction'
+      path: '/prediction'
+      fullPath: '/prediction'
+      preLoaderRoute: typeof PredictionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/model': {
@@ -124,7 +124,7 @@ const rootRouteChildren: RootRouteChildren = {
   DemoRoute: DemoRoute,
   EdaRoute: EdaRoute,
   ModelRoute: ModelRoute,
-  PredictRoute: PredictRoute,
+  PredictionRoute: PredictionRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
