@@ -9,6 +9,30 @@ class DistrictSummary(BaseModel):
     name: str
     avg_price: float
     count: int
+    schoolCount: int
+    hospitalCount: int
+    landslideAlerts: int
+    relocationHouseholds: int
+    districtRentBenchmark: float
+    environmentScore: int
+    floodSafe: bool
+    dangerZone: bool
+    contextNotes: list[str]
+
+
+class PropertyTypeSummary(BaseModel):
+    key: str
+    name: str
+    count: int
+
+
+class GeocodeSuggestion(BaseModel):
+    name: str
+    address: str
+    district: str
+    lat: float
+    lng: float
+    source: Literal["nominatim", "preset", "map"]
 
 
 class DatasetSummary(BaseModel):
@@ -26,6 +50,10 @@ class DatasetSummary(BaseModel):
 class PropertyResponse(BaseModel):
     id: str
     title: str
+    propertyType: str
+    propertyTypeKey: str
+    areaGroup: str
+    priceGroup: str
     area: float
     price: float
     district: str
@@ -39,9 +67,17 @@ class PropertyResponse(BaseModel):
     nearHospital: bool
     floodSafe: bool
     dangerZone: bool
+    schoolCount: int
+    hospitalCount: int
+    landslideAlerts: int
+    relocationHouseholds: int
+    districtRentBenchmark: float
+    environmentScore: int
+    contextNotes: list[str]
     lat: float
     lng: float
     aiPrice: float
+    aiModelKey: str
 
 
 class ModelMetadata(BaseModel):

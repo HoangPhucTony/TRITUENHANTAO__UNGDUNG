@@ -1,4 +1,4 @@
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000/api").replace(
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "/api").replace(
   /\/+$/,
   "",
 );
@@ -6,6 +6,10 @@ const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:800
 export interface PropertyDto {
   id: string;
   title: string;
+  propertyType: string;
+  propertyTypeKey: string;
+  areaGroup: string;
+  priceGroup: string;
   area: number;
   price: number;
   district: string;
@@ -19,15 +23,47 @@ export interface PropertyDto {
   nearHospital: boolean;
   floodSafe: boolean;
   dangerZone: boolean;
+  schoolCount: number;
+  hospitalCount: number;
+  landslideAlerts: number;
+  relocationHouseholds: number;
+  districtRentBenchmark: number;
+  environmentScore: number;
+  contextNotes: string[];
   lat: number;
   lng: number;
   aiPrice: number;
+  aiModelKey: string;
 }
 
 export interface DistrictDto {
   name: string;
   avg_price: number;
   count: number;
+  schoolCount: number;
+  hospitalCount: number;
+  landslideAlerts: number;
+  relocationHouseholds: number;
+  districtRentBenchmark: number;
+  environmentScore: number;
+  floodSafe: boolean;
+  dangerZone: boolean;
+  contextNotes: string[];
+}
+
+export interface PropertyTypeDto {
+  key: string;
+  name: string;
+  count: number;
+}
+
+export interface GeocodeSuggestionDto {
+  name: string;
+  address: string;
+  district: string;
+  lat: number;
+  lng: number;
+  source: "nominatim" | "preset" | "map";
 }
 
 export interface DatasetSummaryDto {
@@ -89,6 +125,7 @@ export interface PredictionResponseDto {
 
 interface GetPropertiesFilters {
   district?: string;
+  propertyType?: string;
   maxPrice?: number;
   limit?: number;
 }
@@ -141,6 +178,9 @@ export const api = {
     if (filters?.district && filters.district !== "all") {
       params.append("district", filters.district);
     }
+    if (filters?.propertyType && filters.propertyType !== "all") {
+      params.append("property_type", filters.propertyType);
+    }
     if (filters?.maxPrice !== undefined) {
       params.append("max_price", filters.maxPrice.toString());
     }
@@ -154,7 +194,12 @@ export const api = {
 
   getDistricts: () => fetchApi<DistrictDto[]>("/properties/districts"),
 
+  getPropertyTypes: () => fetchApi<PropertyTypeDto[]>("/properties/property-types"),
+
   getDatasetSummary: () => fetchApi<DatasetSummaryDto>("/properties/summary"),
+
+  searchAddress: (query: string) =>
+    fetchApi<GeocodeSuggestionDto[]>(`/properties/geocode?q=${encodeURIComponent(query)}`),
 
   getModels: () => fetchApi<ModelMetadataDto[]>("/models/"),
 

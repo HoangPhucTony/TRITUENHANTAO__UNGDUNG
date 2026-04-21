@@ -28,10 +28,10 @@ MODEL_METADATA = [
         "color": "#eab308",
         "speed": 95,
         "interpret": 95,
-        "features": "Tất cả 24 features (sau encoding)",
-        "whyChosen": "Đơn giản, nhanh, dễ giải thích, phù hợp làm baseline để so sánh.",
-        "characteristics": "Giả định quan hệ tuyến tính giữa feature và giá, dễ giải thích bằng coefficient.",
-        "weakness": "Khó bắt được tương tác phi tuyến như diện tích kết hợp vị trí.",
+        "features": "Tất cả feature sau encoding",
+        "whyChosen": "Baseline dễ giải thích và rất nhanh.",
+        "characteristics": "Giả định quan hệ tuyến tính giữa feature và giá.",
+        "weakness": "Khó bắt tương tác phi tuyến.",
     },
     {
         "key": "tree",
@@ -44,10 +44,10 @@ MODEL_METADATA = [
         "color": "#f97316",
         "speed": 88,
         "interpret": 90,
-        "features": "Tất cả 24 features",
-        "whyChosen": "Bắt được các quy tắc phi tuyến và rất trực quan khi cần giải thích.",
-        "characteristics": "Tách dữ liệu theo rule dạng if-then nên dễ quan sát tác động của từng nhánh.",
-        "weakness": "Dễ overfit nếu không kiểm soát độ sâu và variance khá cao.",
+        "features": "Tất cả feature",
+        "whyChosen": "Trực quan khi cần giải thích rule.",
+        "characteristics": "Tách dữ liệu theo dạng if-then.",
+        "weakness": "Dễ overfit nếu không kiểm soát độ sâu.",
     },
     {
         "key": "knn",
@@ -60,10 +60,10 @@ MODEL_METADATA = [
         "color": "#ec4899",
         "speed": 35,
         "interpret": 70,
-        "features": "Các numerical features sau chuẩn hóa",
-        "whyChosen": "Hữu ích để so khớp các phòng tương tự trong không gian đặc trưng.",
-        "characteristics": "Dự đoán bằng trung bình của các điểm gần nhất nên hợp với dữ liệu nhỏ-vừa.",
-        "weakness": "Dự đoán chậm hơn và nhạy với việc scale feature.",
+        "features": "Feature số và categorical sau preprocessing",
+        "whyChosen": "Hợp với các phòng có đặc trưng tương tự nhau.",
+        "characteristics": "Dự đoán từ các điểm lân cận.",
+        "weakness": "Nhạy với scale và chậm hơn ở inference.",
     },
     {
         "key": "rf",
@@ -76,10 +76,10 @@ MODEL_METADATA = [
         "color": "#10b981",
         "speed": 65,
         "interpret": 50,
-        "features": "Tất cả 24 features",
-        "whyChosen": "Ổn định hơn cây đơn nhờ nhiều cây bootstrap và giảm overfit khá tốt.",
-        "characteristics": "Dự đoán bằng trung bình của nhiều decision tree học trên mẫu khác nhau.",
-        "weakness": "Nặng hơn và khó giải thích hơn so với một decision tree đơn lẻ.",
+        "features": "Tất cả feature",
+        "whyChosen": "Ổn định và giảm overfit tốt.",
+        "characteristics": "Trung bình từ nhiều cây bootstrap.",
+        "weakness": "Khó giải thích hơn cây đơn.",
     },
     {
         "key": "xgb",
@@ -92,14 +92,14 @@ MODEL_METADATA = [
         "color": "#6366f1",
         "speed": 70,
         "interpret": 40,
-        "features": "Tất cả 24 features + interaction features",
-        "whyChosen": "Cho hiệu quả rất tốt trên dữ liệu tabular và bắt được pattern phức tạp.",
-        "characteristics": "Boosting tuần tự giúp mỗi cây sửa lỗi cho cây trước đó.",
-        "weakness": "Cần tune nhiều hyperparameter và khó giải thích hơn linear/tree.",
+        "features": "Tất cả feature và interaction phi tuyến",
+        "whyChosen": "Hiệu quả tốt trên dữ liệu tabular.",
+        "characteristics": "Boosting tuần tự để sửa lỗi cây trước.",
+        "weakness": "Khó giải thích hơn.",
     },
     {
         "key": "ensemble",
-        "name": "Ensemble (RF+XGB+KNN)",
+        "name": "Ensemble (RF + XGB + KNN)",
         "type": "ensemble",
         "MAE": 0.38,
         "RMSE": 0.55,
@@ -109,9 +109,9 @@ MODEL_METADATA = [
         "speed": 50,
         "interpret": 45,
         "features": "Kết hợp từ 3 mô hình tốt nhất",
-        "whyChosen": "Tận dụng điểm mạnh khác nhau của từng mô hình để tăng độ ổn định.",
-        "characteristics": "Trung bình có trọng số giữa XGBoost, Random Forest và KNN.",
-        "weakness": "Phức tạp hơn, khó debug hơn và tiêu tốn tài nguyên hơn mô hình đơn.",
+        "whyChosen": "Tăng độ ổn định khi deploy listing.",
+        "characteristics": "Weighted average của XGB, RF và KNN.",
+        "weakness": "Phức tạp hơn mô hình đơn.",
     },
 ]
 
@@ -253,7 +253,10 @@ class ModelService:
         return None
 
     def get_listing_model_key(self) -> str | None:
-        return "xgb" if "xgb" in self.models else self.get_best_available_model_key()
+        available_ensemble_parts = [key for key in ENSEMBLE_WEIGHTS if key in self.models]
+        if available_ensemble_parts:
+            return "ensemble"
+        return self.get_best_available_model_key()
 
     def resolve_model_key(self, requested_key: str) -> str:
         if requested_key in {"auto", "ensemble"}:
@@ -275,7 +278,6 @@ class ModelService:
             is_available = item["key"] in available_models
             if item["key"] == "ensemble":
                 is_available = any(key in available_models for key in ENSEMBLE_WEIGHTS)
-
             metadata.append({**item, "available": is_available})
 
         return metadata
@@ -309,6 +311,8 @@ class ModelService:
         area: float,
         district: str,
         title: str | None = None,
+        property_type: str | None = None,
+        property_type_key: str | None = None,
         is_studio: bool = False,
         has_balcony: bool = False,
         has_furniture: bool = False,
@@ -324,6 +328,8 @@ class ModelService:
             area_group = "Vừa (25-50m²)"
 
         resolved_title = title or f"Phòng trọ {district} {area}m2"
+        resolved_property_type = property_type or "Phòng trọ"
+        resolved_property_type_key = property_type_key or "PhongTro"
 
         return {
             "area_m2": float(area),
@@ -337,15 +343,20 @@ class ModelService:
             "has_mezzanine": bool(has_mezzanine),
             "has_window": bool(has_window),
             "area_group": area_group,
-            "property_type_clean": "Phòng trọ",
-            "phanloai": "PhongTro",
+            "property_type_clean": resolved_property_type,
+            "phanloai": resolved_property_type_key,
             "sophong": 1,
             "tieude": resolved_title,
             "dientich": f"{area} m²",
         }
 
-    def _prepare_input_frame(self, input_data: dict[str, Any]) -> pd.DataFrame:
-        df_input = pd.DataFrame([input_data])
+    def _prepare_input_frame(self, input_data: dict[str, Any] | list[dict[str, Any]] | pd.DataFrame) -> pd.DataFrame:
+        if isinstance(input_data, pd.DataFrame):
+            df_input = input_data.copy()
+        elif isinstance(input_data, list):
+            df_input = pd.DataFrame(input_data)
+        else:
+            df_input = pd.DataFrame([input_data])
 
         required_cols = [
             "tieude",
@@ -375,11 +386,7 @@ class ModelService:
             else:
                 df_input[column] = "Unknown"
 
-        bool_cols = [
-            column
-            for column in df_input.columns
-            if column.startswith("has_") or column == "sophong"
-        ]
+        bool_cols = [column for column in df_input.columns if column.startswith("has_") or column == "sophong"]
         for column in bool_cols:
             df_input[column] = df_input[column].astype(int)
 
@@ -398,6 +405,19 @@ class ModelService:
             print(f"Prediction error for {model_key}: {exc}")
             return None
 
+    def _predict_with_model_many(self, model_key: str, df_input: pd.DataFrame) -> list[float | None]:
+        model = self.models.get(model_key)
+        if model is None:
+            return [None] * len(df_input)
+
+        try:
+            predictions = model.predict(df_input)
+            return [float(prediction) for prediction in predictions]
+        except Exception as exc:
+            self.load_errors[f"predict:{model_key}"] = str(exc)
+            print(f"Prediction error for {model_key}: {exc}")
+            return [None] * len(df_input)
+
     def predict(self, input_data: dict[str, Any], model_key: str = "xgb") -> float | None:
         df_input = self._prepare_input_frame(input_data)
         resolved_model_key = self.resolve_model_key(model_key)
@@ -410,7 +430,6 @@ class ModelService:
                 prediction = self._predict_with_model(key, df_input)
                 if prediction is None:
                     continue
-
                 final_prediction += prediction * weight
                 total_weight += weight
 
@@ -431,6 +450,51 @@ class ModelService:
             return self._predict_with_model(fallback_key, df_input)
 
         return None
+
+    def predict_many(
+        self,
+        input_rows: list[dict[str, Any]] | pd.DataFrame,
+        model_key: str = "xgb",
+    ) -> list[float | None]:
+        df_input = self._prepare_input_frame(input_rows)
+        resolved_model_key = self.resolve_model_key(model_key)
+
+        if resolved_model_key == "ensemble":
+            weighted_predictions = [0.0] * len(df_input)
+            total_weights = [0.0] * len(df_input)
+
+            for key, weight in ENSEMBLE_WEIGHTS.items():
+                predictions = self._predict_with_model_many(key, df_input)
+                for index, prediction in enumerate(predictions):
+                    if prediction is None:
+                        continue
+                    weighted_predictions[index] += prediction * weight
+                    total_weights[index] += weight
+
+            results: list[float | None] = []
+            fallback_key = self.get_best_available_model_key()
+            fallback_predictions = None
+            if fallback_key:
+                fallback_predictions = self._predict_with_model_many(fallback_key, df_input)
+
+            for index, total_weight in enumerate(total_weights):
+                if total_weight > 0:
+                    results.append(weighted_predictions[index] / total_weight)
+                elif fallback_predictions is not None:
+                    results.append(fallback_predictions[index])
+                else:
+                    results.append(None)
+            return results
+
+        direct_predictions = self._predict_with_model_many(resolved_model_key, df_input)
+        if any(prediction is not None for prediction in direct_predictions):
+            return direct_predictions
+
+        fallback_key = self.get_best_available_model_key()
+        if fallback_key and fallback_key != resolved_model_key:
+            return self._predict_with_model_many(fallback_key, df_input)
+
+        return [None] * len(df_input)
 
 
 model_service = ModelService()
